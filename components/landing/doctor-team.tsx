@@ -105,13 +105,13 @@ export function DoctorTeam() {
 
           <div
             ref={scrollRef}
-            className="flex gap-4 overflow-x-auto scroll-smooth pb-4 sm:gap-5 lg:gap-6"
+            className="flex items-stretch gap-4 overflow-x-auto scroll-smooth pb-4 sm:gap-5 lg:gap-6"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {doctors.map((doctor, index) => (
               <div key={index} className="w-48 flex-shrink-0 sm:w-52 lg:w-56">
-                <div className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
-                  <div className="relative h-48 overflow-hidden sm:h-56">
+                <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+                  <div className="relative h-48 flex-shrink-0 overflow-hidden sm:h-56">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={doctor.image}
@@ -121,18 +121,18 @@ export function DoctorTeam() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[hsl(210,40%,12%)]/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                   </div>
-                  <div className="p-3 text-center sm:p-4">
+                  <div className="flex flex-1 flex-col p-3 text-center sm:p-4">
                     <h3 className="mb-0.5 font-serif text-xs font-bold text-foreground sm:text-sm">
                       {doctor.name}
                     </h3>
-                    <p className="mb-2.5 text-[11px] font-medium text-primary sm:mb-3 sm:text-xs">
+                    <p className="mb-2.5 flex-1 text-[11px] font-medium text-primary sm:mb-3 sm:text-xs">
                       {doctor.title}
                     </p>
                     <a
                       href="https://wa.me/905001234567"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-1.5 rounded-lg bg-[hsl(var(--accent))] px-3 py-2 text-xs font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105"
+                      className="mt-auto flex items-center justify-center gap-1.5 rounded-lg bg-[hsl(var(--accent))] px-3 py-2 text-xs font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105"
                     >
                       <WhatsAppIcon className="h-3.5 w-3.5" />
                       Randevu Al
