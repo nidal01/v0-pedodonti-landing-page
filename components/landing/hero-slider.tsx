@@ -8,17 +8,17 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 const slides = [
   {
     image: "/images/hero-child-smile.jpg",
-    title: "Cocuk Dis Sagliginda Uzman Cozum",
+    title: "Çocuk Diş Sağlığında Uzman Çözüm",
     titleHighlight: "Trakyadent Pedodonti",
     subtitle:
-      "Minik gulusler icin korkusuz, guvenli ve sevgi dolu bir dis tedavi deneyimi",
+      "Minik gülüşler için korkusuz, güvenli ve sevgi dolu bir diş tedavi deneyimi",
   },
   {
     image: "/images/hero-digital-anesthesia.jpg",
     title: "Konforlu Tedavi,",
-    titleHighlight: "Dijital Anestezi Guvencesi",
+    titleHighlight: "Dijital Anestezi Güvencesi",
     subtitle:
-      "Dijital anestezi sayesinde cocuklar icin daha konforlu tedavi",
+      "Dijital anestezi sayesinde çocuklar için daha konforlu tedavi",
   },
 ]
 
@@ -81,7 +81,7 @@ export function HeroSlider() {
             src={slide.image}
             alt={slide.title}
             fill
-            className="object-cover object-top"
+            className="object-cover object-center"
             priority={index === 0}
             sizes="100vw"
           />
