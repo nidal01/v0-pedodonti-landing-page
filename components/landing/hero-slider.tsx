@@ -130,7 +130,7 @@ export function HeroSlider() {
                 </p>
 
                 <div
-                  className={`flex flex-col gap-3 transition-all duration-700 sm:flex-row sm:gap-4 ${
+                  className={`flex flex-row flex-wrap gap-2 transition-all duration-700 sm:gap-4 ${
                     index === current
                       ? "translate-y-0 opacity-100"
                       : "translate-y-8 opacity-0"
@@ -141,14 +141,14 @@ export function HeroSlider() {
                     href="https://wa.me/905001234567"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-5 py-3 text-sm font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-all hover:scale-105 hover:shadow-xl sm:px-6 sm:py-3.5 sm:text-base"
+                    className="flex items-center justify-center gap-1.5 rounded-lg bg-[hsl(var(--accent))] px-3.5 py-2.5 text-xs font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-all hover:scale-105 hover:shadow-xl sm:gap-2 sm:rounded-xl sm:px-6 sm:py-3.5 sm:text-base"
                   >
-                    <WhatsAppIcon className="h-5 w-5" />
+                    <WhatsAppIcon className="h-4 w-4 sm:h-5 sm:w-5" />
                     WhatsApp ile Randevu
                   </a>
                   <a
                     href="tel:4442289"
-                    className="flex items-center justify-center gap-2 rounded-xl border-2 border-[hsl(0,0%,100%)]/30 bg-[hsl(0,0%,100%)]/10 px-5 py-3 text-sm font-bold text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:border-[hsl(0,0%,100%)]/50 hover:bg-[hsl(0,0%,100%)]/20 sm:px-6 sm:py-3.5 sm:text-base"
+                    className="flex items-center justify-center gap-1.5 rounded-lg border-2 border-[hsl(0,0%,100%)]/30 bg-[hsl(0,0%,100%)]/10 px-3.5 py-2.5 text-xs font-bold text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:border-[hsl(0,0%,100%)]/50 hover:bg-[hsl(0,0%,100%)]/20 sm:gap-2 sm:rounded-xl sm:px-6 sm:py-3.5 sm:text-base"
                   >
                     444 22 89 Hemen Arayin
                   </a>
