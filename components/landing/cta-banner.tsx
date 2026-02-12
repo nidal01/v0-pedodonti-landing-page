@@ -1,7 +1,8 @@
 "use client"
 
 import React from "react"
-import { MessageCircle, Phone, Send } from "lucide-react"
+import { Phone, Send } from "lucide-react"
+import { WhatsAppIcon } from "./whatsapp-icon"
 
 export function CTABanner() {
   return (
@@ -12,11 +13,11 @@ export function CTABanner() {
 
       <div className="relative mx-auto max-w-4xl px-4 text-center">
         <h2 className="mb-4 font-serif text-3xl font-extrabold text-primary-foreground lg:text-5xl">
-          Cocugunuzun Gulumseyen Gelecegi Icin Ilk Adimi Atin!
+          Çocuğunuzun Gülümseyen Geleceği İçin İlk Adımı Atın!
         </h2>
         <p className="mb-8 text-lg text-primary-foreground/80 lg:text-xl">
-          Uzman pedodonti ekibimizden ucretsiz bilgi alin. Hemen randevunuzu
-          olusturun!
+          Uzman pedodonti ekibimizden ücretsiz bilgi alın. Hemen randevunuzu
+          oluşturun!
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
@@ -25,15 +26,15 @@ export function CTABanner() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-8 py-4 text-base font-bold text-[hsl(var(--accent-foreground))] shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon className="h-5 w-5" />
             WhatsApp ile Bilgi Al
           </a>
           <a
-            href="tel:4442222"
+            href="tel:4442289"
             className="flex items-center gap-2 rounded-xl border-2 border-primary-foreground/30 bg-primary-foreground/10 px-8 py-4 text-base font-bold text-primary-foreground backdrop-blur-sm transition-all hover:border-primary-foreground/50 hover:bg-primary-foreground/20"
           >
             <Phone className="h-5 w-5" />
-            444 2 222
+            444 22 89
           </a>
           <a
             href="#iletisim"

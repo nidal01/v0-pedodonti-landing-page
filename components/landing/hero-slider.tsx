@@ -2,22 +2,23 @@
 
 import React, { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
-import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { WhatsAppIcon } from "./whatsapp-icon"
 
 const slides = [
   {
     image: "/images/hero-child-smile.jpg",
-    title: "Cocuk Dis Sagliginda Uzman Cozum",
+    title: "Çocuk Diş Sağlığında Uzman Çözüm",
     titleHighlight: "Trakyadent Pedodonti",
     subtitle:
-      "Minik gulusler icin korkusuz, guvenli ve sevgi dolu bir dis tedavi deneyimi",
+      "Minik gülüşler için korkusuz, güvenli ve sevgi dolu bir diş tedavi deneyimi",
   },
   {
     image: "/images/hero-digital-anesthesia.jpg",
     title: "Konforlu Tedavi,",
-    titleHighlight: "Dijital Anestezi Guvencesi",
+    titleHighlight: "Dijital Anestezi Güvencesi",
     subtitle:
-      "Dijital anestezi sayesinde cocuklar icin daha konforlu tedavi",
+      "Dijital anestezi sayesinde çocuklar için daha konforlu tedavi",
   },
 ]
 
@@ -111,14 +112,14 @@ export function HeroSlider() {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-6 py-3.5 text-base font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-all hover:scale-105 hover:shadow-xl"
                   >
-                    <MessageCircle className="h-5 w-5" />
+                    <WhatsAppIcon className="h-5 w-5" />
                     WhatsApp ile Randevu Al
                   </a>
                   <a
-                    href="tel:4442222"
+                    href="tel:4442289"
                     className="flex items-center justify-center gap-2 rounded-xl border-2 border-[hsl(0,0%,100%)]/30 bg-[hsl(0,0%,100%)]/10 px-6 py-3.5 text-base font-bold text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:border-[hsl(0,0%,100%)]/50 hover:bg-[hsl(0,0%,100%)]/20"
                   >
-                    444 2 222 Hemen Arayin
+                    444 22 89 Hemen Arayın
                   </a>
                 </div>
               </div>
@@ -127,17 +128,17 @@ export function HeroSlider() {
         </div>
       ))}
 
-      {/* Slider controls */}
+      {/* Slider controls - moved to bottom corners to not block text */}
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:bg-[hsl(0,0%,100%)]/40"
-        aria-label="Onceki slayt"
+        className="absolute bottom-24 right-24 z-10 hidden h-12 w-12 items-center justify-center rounded-full bg-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:bg-[hsl(0,0%,100%)]/40 lg:flex"
+        aria-label="Önceki slayt"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:bg-[hsl(0,0%,100%)]/40"
+        className="absolute bottom-24 right-8 z-10 hidden h-12 w-12 items-center justify-center rounded-full bg-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:bg-[hsl(0,0%,100%)]/40 lg:flex"
         aria-label="Sonraki slayt"
       >
         <ChevronRight className="h-6 w-6" />

@@ -1,52 +1,53 @@
 "use client"
 
 import React, { useState } from "react"
-import { ChevronDown, MessageCircle } from "lucide-react"
+import { ChevronDown } from "lucide-react"
+import { WhatsAppIcon } from "./whatsapp-icon"
 
 const faqs = [
   {
-    q: "Dijital anestezi nedir? Cocuklar icin avantajli mi?",
-    a: "Dijital anestezi, ilacin kontrollu ve yavas sekilde uygulanmasini saglayan modern bir uyusturma yontemidir. Bu sayede agri ve basinc hissi minimuma iner, islem daha konforlu gerceklesir. Ozellikle cocuk hastalarda igne korkusunu azaltarak pedodonti tedavilerinin daha rahat tamamlanmasina yardimci olur.",
+    q: "Dijital anestezi nedir? Çocuklar için avantajlı mı?",
+    a: "Dijital anestezi, ilacın kontrollü ve yavaş şekilde uygulanmasını sağlayan modern bir uyuşturma yöntemidir. Bu sayede ağrı ve basınç hissi minimuma iner, işlem daha konforlu gerçekleşir. Özellikle çocuk hastalarda iğne korkusunu azaltarak pedodonti tedavilerinin daha rahat tamamlanmasına yardımcı olur.",
   },
   {
-    q: "Cocuklar ilk dis muayenesine ne zaman gitmeli?",
-    a: "Ilk disler ciktiktan sonra, genellikle 1 yas civarinda ilk dis hekimi muayenesi onerilir. Erken yapilan pedodonti kontrolleri, curuk olusumunu onlemeye ve saglikli dis gelisimini takip etmeye yardimci olur.",
+    q: "Çocuklar ilk diş muayenesine ne zaman gitmeli?",
+    a: "İlk dişler çıktıktan sonra, genellikle 1 yaş civarında ilk diş hekimi muayenesi önerilir. Erken yapılan pedodonti kontrolleri, çürük oluşumunu önlemeye ve sağlıklı diş gelişimini takip etmeye yardımcı olur.",
   },
   {
-    q: "Pedodonti (cocuk dis hekimligi) nedir, hangi tedavileri kapsar?",
-    a: "Pedodonti; bebeklikten ergenlik donemine kadar cocuklarin agiz ve dis sagligiyla ilgilenen uzmanlik alanidir. Koruyucu uygulamalar, dolgu, kanal tedavisi, dis temizligi, fissur ortucu ve yer tutucu gibi bircok tedaviyi kapsar.",
+    q: "Pedodonti (çocuk diş hekimliği) nedir, hangi tedavileri kapsar?",
+    a: "Pedodonti; bebeklikten ergenlik dönemine kadar çocukların ağız ve diş sağlığıyla ilgilenen uzmanlık alanıdır. Koruyucu uygulamalar, dolgu, kanal tedavisi, diş temizliği, fissür örtücü ve yer tutucu gibi birçok tedaviyi kapsar.",
   },
   {
-    q: "Cocuklarda dis curugu nasil onlenir?",
-    a: "Duzenli dis fircalama, saglikli beslenme aliskanliklari ve rutin dis hekimi kontrolleri curuk olusumunu buyuk olcude engeller. Pedodonti uzmani tarafindan uygulanan koruyucu tedaviler de disleri ekstra koruma saglar.",
+    q: "Çocuklarda diş çürüğü nasıl önlenir?",
+    a: "Düzenli diş fırçalama, sağlıklı beslenme alışkanlıkları ve rutin diş hekimi kontrolleri çürük oluşumunu büyük ölçüde engeller. Pedodonti uzmanı tarafından uygulanan koruyucu tedaviler de dişleri ekstra koruma sağlar.",
   },
   {
-    q: "Sut disleri neden onemlidir? Nasil korunmalidir?",
-    a: 'Sut disleri, cocugun beslenmesi, konusma gelisimi ve kalici dislerin dogru konumlanmasi icin cok onemlidir. Bu nedenle "nasil olsa dusecek" dusuncesi yerine duzenli bakim ve tedavi ihmal edilmemelidir.',
+    q: "Süt dişleri neden önemlidir? Nasıl korunmalıdır?",
+    a: "Süt dişleri, çocuğun beslenmesi, konuşma gelişimi ve kalıcı dişlerin doğru konumlanması için çok önemlidir. Bu nedenle \"nasıl olsa düşecek\" düşüncesi yerine düzenli bakım ve tedavi ihmal edilmemelidir.",
   },
   {
-    q: "Cocugum dis hekiminden korkuyor, ne yapmaliyim?",
-    a: "Pedodonti kliniklerinde cocuklara ozel iletisim teknikleri ve konforlu ortamlar kullanilir. Trakyadent'te cocuk psikolojisine uygun yaklasimla, korku ve kaygiyi en aza indiren bir tedavi sureci planlanir.",
+    q: "Çocuğum diş hekiminden korkuyor, ne yapmalıyım?",
+    a: "Pedodonti kliniklerinde çocuklara özel iletişim teknikleri ve konforlu ortamlar kullanılır. Trakyadent'te çocuk psikolojisine uygun yaklaşımla, korku ve kaygıyı en aza indiren bir tedavi süreci planlanır.",
   },
   {
-    q: "Cocuklarda dolgu veya kanal tedavisi yapilir mi?",
-    a: "Evet. Sut dislerinde olusan curukler ilerlediginde dolgu veya kanal tedavisi gerekebilir. Bu islemler disin korunmasini saglar ve erken dis kaybini onler.",
+    q: "Çocuklarda dolgu veya kanal tedavisi yapılır mı?",
+    a: "Evet. Süt dişlerinde oluşan çürükler ilerlediğinde dolgu veya kanal tedavisi gerekebilir. Bu işlemler dişin korunmasını sağlar ve erken diş kaybını önler.",
   },
   {
-    q: "Fissur ortucu (sealant) nedir, ne ise yarar?",
-    a: "Fissur ortucu, azi dislerinin cigneme yuzeyine uygulanan koruyucu bir kaplamadir. Bakterilerin dise tutunmasini engelleyerek curuk riskini azaltir ve ozellikle cocuklarda sik tercih edilir.",
+    q: "Fissür örtücü (sealant) nedir, ne işe yarar?",
+    a: "Fissür örtücü, azı dişlerinin çiğneme yüzeyine uygulanan koruyucu bir kaplamadır. Bakterilerin dişe tutunmasını engelleyerek çürük riskini azaltır ve özellikle çocuklarda sık tercih edilir.",
   },
   {
-    q: "Cocuk dis tedavileri agrili midir?",
-    a: "Modern teknikler ve uygun anestezi yontemleri sayesinde pedodonti tedavileri genellikle agrisiz ve konforlu sekilde gerceklestirilir. Amac cocugun rahat bir deneyim yasamasidir.",
+    q: "Çocuk diş tedavileri ağrılı mıdır?",
+    a: "Modern teknikler ve uygun anestezi yöntemleri sayesinde pedodonti tedavileri genellikle ağrısız ve konforlu şekilde gerçekleştirilir. Amaç çocuğun rahat bir deneyim yaşamasıdır.",
   },
   {
-    q: "Tedavi sirasinda anestezi veya sedasyon uygulanir mi?",
-    a: "Gerekli durumlarda lokal anestezi uygulanabilir. Islem suresi ve cocugun durumuna gore hekim tarafindan en uygun ve guvenli yontem belirlenir.",
+    q: "Tedavi sırasında anestezi veya sedasyon uygulanır mı?",
+    a: "Gerekli durumlarda lokal anestezi uygulanabilir. İşlem süresi ve çocuğun durumuna göre hekim tarafından en uygun ve güvenli yöntem belirlenir.",
   },
   {
-    q: "Pedodonti randevusu ne kadar surer, surec nasil ilerler?",
-    a: "Ilk muayenede cocugun agiz ve dis yapisi degerlendirilir, ardindan ihtiyac duyulan tedaviler planlanir. Cogu kontrol ve basit islem kisa surede tamamlanir, detayli tedaviler icin ise randevu planlamasi yapilir.",
+    q: "Pedodonti randevusu ne kadar sürer, süreç nasıl ilerler?",
+    a: "İlk muayenede çocuğun ağız ve diş yapısı değerlendirilir, ardından ihtiyaç duyulan tedaviler planlanır. Çoğu kontrol ve basit işlem kısa sürede tamamlanır, detaylı tedaviler için ise randevu planlaması yapılır.",
   },
 ]
 
@@ -58,14 +59,14 @@ export function FAQ() {
       <div className="mx-auto max-w-3xl px-4">
         <div className="mb-12 text-center lg:mb-16">
           <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
-            Sik Sorulan Sorular
+            Sık Sorulan Sorular
           </span>
           <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
-            Pedodonti Hakkinda Merak Edilenler!
+            Pedodonti Hakkında Merak Edilenler!
           </h2>
           <p className="text-lg text-muted-foreground">
-            Cocuk dis sagligi ve tedavi surecleriyle ilgili en cok sorulan sorulari
-            sizin icin yanitladik.
+            Çocuk diş sağlığı ve tedavi süreçleriyle ilgili en çok sorulan soruları
+            sizin için yanıtladık.
           </p>
         </div>
 
@@ -106,10 +107,10 @@ export function FAQ() {
         {/* CTA after FAQ */}
         <div className="mt-10 rounded-2xl bg-primary p-8 text-center lg:p-10">
           <h3 className="mb-3 font-serif text-2xl font-extrabold text-primary-foreground">
-            Akliniza Takilan Baska Sorular Mi Var?
+            Aklınıza Takılan Başka Sorular Mı Var?
           </h3>
           <p className="mb-6 text-primary-foreground/80">
-            Pedodonti ekibimizle hemen iletisime gecin.
+            Pedodonti ekibimizle hemen iletişime geçin.
           </p>
           <a
             href="https://wa.me/905001234567"
@@ -117,7 +118,7 @@ export function FAQ() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-8 py-4 text-base font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-transform hover:scale-105"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon className="h-5 w-5" />
             WhatsApp ile Sorun
           </a>
         </div>

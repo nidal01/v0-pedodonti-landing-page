@@ -2,11 +2,12 @@
 
 import React from "react"
 import Image from "next/image"
-import { MessageCircle, Play } from "lucide-react"
+import { Play } from "lucide-react"
+import { WhatsAppIcon } from "./whatsapp-icon"
 
 const doctors = [
   {
-    name: "Dr. Ayse Yilmaz",
+    name: "Dr. Ayşe Yılmaz",
     title: "Uzm. Pedodonti",
     image: "/images/doctor-1.jpg",
   },
@@ -21,7 +22,7 @@ const doctors = [
     image: "/images/doctor-3.jpg",
   },
   {
-    name: "Dr. Ahmet Celik",
+    name: "Dr. Ahmet Çelik",
     title: "Uzm. Pedodonti",
     image: "/images/doctor-4.jpg",
   },
@@ -40,7 +41,7 @@ export function DoctorTeam() {
             Uzman Pedodonti Ekibimiz
           </h2>
           <p className="text-lg text-muted-foreground">
-            Minik Gulusler Icin Buyuk Uzmanlik!
+            Minik Gülüşler İçin Büyük Uzmanlık!
           </p>
         </div>
 
@@ -72,7 +73,7 @@ export function DoctorTeam() {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-4 py-2.5 text-sm font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105"
                 >
-                  <MessageCircle className="h-4 w-4" />
+                  <WhatsAppIcon className="h-4 w-4" />
                   WhatsApp
                 </a>
               </div>
@@ -84,19 +85,19 @@ export function DoctorTeam() {
         <div className="mt-20">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
-              Hekimlerimiz Anlatiyor!
+              Hekimlerimiz Anlatıyor!
             </h2>
             <p className="text-lg text-muted-foreground">
-              Uzman hekimlerimizin bilgilendirici videolariyla tedavi surecleri
-              hakkinda detayli bilgi alin.
+              Uzman hekimlerimizin bilgilendirici videolarıyla tedavi süreçleri
+              hakkında detaylı bilgi alın.
             </p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              "Cocuklarda Dis Bakimi",
+              "Çocuklarda Diş Bakımı",
               "Dijital Anestezi Nedir?",
-              "Sut Disleri Neden Onemli?",
+              "Süt Dişleri Neden Önemli?",
             ].map((title, index) => (
               <div
                 key={index}

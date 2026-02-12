@@ -1,31 +1,32 @@
 "use client"
 
 import React from "react"
-import { MapPin, Phone, MessageCircle, Navigation } from "lucide-react"
+import { MapPin, Phone, Navigation } from "lucide-react"
+import { WhatsAppIcon } from "./whatsapp-icon"
 
 const clinics = [
   {
     name: "Trakyadent Edirne Merkez",
-    address: "Sabuni Mah. Talatpasa Cad. No:123, Edirne",
-    phone: "444 2 222",
+    address: "Sabuni Mah. Talatpaşa Cad. No:123, Edirne",
+    phone: "444 22 89",
     mapUrl: "https://maps.google.com",
   },
   {
-    name: "Trakyadent Kesan",
-    address: "Yunus Emre Mah. Hastane Cad. No:45, Kesan/Edirne",
-    phone: "444 2 222",
+    name: "Trakyadent Keşan",
+    address: "Yunus Emre Mah. Hastane Cad. No:45, Keşan/Edirne",
+    phone: "444 22 89",
     mapUrl: "https://maps.google.com",
   },
   {
-    name: "Trakyadent Kirklareli",
-    address: "Karacaibrahim Mah. Istasyon Cad. No:67, Kirklareli",
-    phone: "444 2 222",
+    name: "Trakyadent Kırklareli",
+    address: "Karacaibrahim Mah. İstasyon Cad. No:67, Kırklareli",
+    phone: "444 22 89",
     mapUrl: "https://maps.google.com",
   },
   {
-    name: "Trakyadent Luleburgaz",
-    address: "Omer Seyfettin Mah. Cumhuriyet Cad. No:89, Luleburgaz/Kirklareli",
-    phone: "444 2 222",
+    name: "Trakyadent Lüleburgaz",
+    address: "Ömer Seyfettin Mah. Cumhuriyet Cad. No:89, Lüleburgaz/Kırklareli",
+    phone: "444 22 89",
     mapUrl: "https://maps.google.com",
   },
 ]
@@ -39,10 +40,10 @@ export function Clinics() {
             Kliniklerimiz
           </span>
           <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
-            Size En Yakin Trakyadent&apos;teyiz!
+            {"Size En Yakın Trakyadent'teyiz!"}
           </h2>
           <p className="text-xl font-semibold text-primary">
-            {"4 Sube \u2022 Tek Kalite Standardi"}
+            {"4 Şube \u2022 Tek Kalite Standardı"}
           </p>
         </div>
 
@@ -87,7 +88,7 @@ export function Clinics() {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-4 py-2.5 text-sm font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-[1.02]"
                   >
-                    <MessageCircle className="h-4 w-4" />
+                    <WhatsAppIcon className="h-4 w-4" />
                     WhatsApp
                   </a>
                   <a

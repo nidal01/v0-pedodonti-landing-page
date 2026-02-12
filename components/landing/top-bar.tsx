@@ -1,6 +1,9 @@
 "use client"
 
-import { Phone, MessageCircle } from "lucide-react"
+import React from "react"
+import Image from "next/image"
+import { Phone } from "lucide-react"
+import { WhatsAppIcon } from "./whatsapp-icon"
 
 const navItems = [
   { label: "Ana Sayfa", href: "#hero" },
@@ -26,11 +29,11 @@ export function TopBar() {
           </span>
           <div className="flex items-center gap-4">
             <a
-              href="tel:4442222"
+              href="tel:4442289"
               className="flex items-center gap-1.5 transition-colors hover:text-[hsl(var(--chart-4))]"
             >
               <Phone className="h-3.5 w-3.5" />
-              <span className="font-semibold">444 2 222</span>
+              <span className="font-semibold">444 22 89</span>
             </a>
             <a
               href="https://wa.me/905001234567"
@@ -54,17 +57,14 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 border-b border-border bg-card/95 shadow-sm backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
         <a href="#hero" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-            <span className="text-lg font-bold text-primary-foreground">T</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-lg font-extrabold leading-tight text-foreground">
-              TRAKYADENT
-            </span>
-            <span className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">
-              Pedodonti Merkezi
-            </span>
-          </div>
+          <Image
+            src="/images/trakyadent-logo.png"
+            alt="Trakyadent Logo"
+            width={180}
+            height={48}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </a>
 
         {/* Desktop Nav */}
@@ -87,7 +87,7 @@ export function Navbar() {
           rel="noopener noreferrer"
           className="hidden items-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-4 py-2 text-sm font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105 lg:flex"
         >
-          <MessageCircle className="h-4 w-4" />
+          <WhatsAppIcon className="h-4 w-4" />
           WhatsApp
         </a>
 
@@ -133,7 +133,7 @@ export function Navbar() {
             rel="noopener noreferrer"
             className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-4 py-2.5 text-sm font-bold text-[hsl(var(--accent-foreground))]"
           >
-            <MessageCircle className="h-4 w-4" />
+            <WhatsAppIcon className="h-4 w-4" />
             WhatsApp ile İletişime Geç
           </a>
         </div>
@@ -141,5 +141,3 @@ export function Navbar() {
     </nav>
   )
 }
-
-import React from "react"

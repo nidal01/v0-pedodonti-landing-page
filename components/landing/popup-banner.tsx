@@ -1,7 +1,8 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
-import { X, MessageCircle, Phone, Gift } from "lucide-react"
+import { X, Phone, Gift } from "lucide-react"
+import { WhatsAppIcon } from "./whatsapp-icon"
 
 export function PopupBanner() {
   const [show, setShow] = useState(false)
@@ -10,7 +11,7 @@ export function PopupBanner() {
     const timer = setTimeout(() => {
       const dismissed = sessionStorage.getItem("popup-dismissed")
       if (!dismissed) setShow(true)
-    }, 4000)
+    }, 30000)
     return () => clearTimeout(timer)
   }, [])
 
@@ -38,10 +39,10 @@ export function PopupBanner() {
             <Gift className="h-7 w-7 text-primary-foreground" />
           </div>
           <h3 className="mb-2 font-serif text-2xl font-extrabold text-primary-foreground">
-            Ucretsiz Dis Kontrolu!
+            Ücretsiz Diş Kontrolü!
           </h3>
           <p className="text-sm text-primary-foreground/80">
-            Cocugunuz icin ucretsiz pedodonti kontrolu randevunuzu simdi alin.
+            Çocuğunuz için ücretsiz pedodonti kontrolü randevunuzu şimdi alın.
           </p>
         </div>
 
@@ -49,10 +50,10 @@ export function PopupBanner() {
         <div className="px-6 py-6">
           <div className="mb-4 rounded-xl bg-muted p-4 text-center">
             <p className="font-serif text-lg font-bold text-foreground">
-              Saglikli Gulusler Icin Ilk Adim!
+              Sağlıklı Gülüşler İçin İlk Adım!
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Uzman pedodonti ekibimiz cocugunuz icin en uygun tedavi planini olusturur.
+              Uzman pedodonti ekibimiz çocuğunuz için en uygun tedavi planını oluşturur.
             </p>
           </div>
 
@@ -64,16 +65,16 @@ export function PopupBanner() {
               onClick={handleClose}
               className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-6 py-3.5 text-sm font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-[1.02]"
             >
-              <MessageCircle className="h-5 w-5" />
+              <WhatsAppIcon className="h-5 w-5" />
               WhatsApp ile Randevu Al
             </a>
             <a
-              href="tel:4442222"
+              href="tel:4442289"
               onClick={handleClose}
               className="flex items-center justify-center gap-2 rounded-xl border-2 border-primary px-6 py-3.5 text-sm font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
             >
               <Phone className="h-5 w-5" />
-              444 2 222 Hemen Ara
+              444 22 89 Hemen Ara
             </a>
           </div>
         </div>

@@ -7,22 +7,22 @@ const stats = [
   {
     icon: Users,
     title: "Uzman Pedodonti Ekibi",
-    desc: "Alaninda deneyimli, cocuk psikolojisini bilen uzman hekimler.",
+    desc: "Alanında deneyimli, çocuk psikolojisini bilen uzman hekimler.",
   },
   {
     icon: Clock,
-    title: "36 Yillik Deneyim",
-    desc: "36 yili askin sure boyunca binlerce aileye guvenle hizmet.",
+    title: "36 Yıllık Deneyim",
+    desc: "36 yılı aşkın süre boyunca binlerce aileye güvenle hizmet.",
   },
   {
     icon: ThumbsUp,
-    title: "Yuksek Hasta Memnuniyeti",
-    desc: "Hasta odakli yaklasimimizla yuksek memnuniyet orani.",
+    title: "Yüksek Hasta Memnuniyeti",
+    desc: "Hasta odaklı yaklaşımımızla yüksek memnuniyet oranı.",
   },
   {
     icon: Building2,
     title: "4 Modern Klinik",
-    desc: "Son teknoloji donanimli, cocuk dostu klinikler.",
+    desc: "Son teknoloji donanımlı, çocuk dostu klinikler.",
   },
 ]
 
@@ -59,7 +59,7 @@ export function WhyTrakyadent() {
               <div className="flex h-full items-center justify-center bg-gradient-to-br from-primary/20 to-[hsl(var(--accent))]/20">
                 <button
                   className="flex h-20 w-20 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-2xl transition-transform hover:scale-110"
-                  aria-label="Tanitim videosunu oynat"
+                  aria-label="Tanıtım videosunu oynat"
                 >
                   <Play className="ml-1 h-8 w-8" />
                 </button>
@@ -78,33 +78,33 @@ export function WhyTrakyadent() {
               Neden Trakyadent?
             </span>
             <h2 className="mb-2 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
-              Cocugunuzun Dis Sagligi Icin Dogru Adres!
+              Çocuğunuzun Diş Sağlığı İçin Doğru Adres!
             </h2>
             <p className="mb-6 text-lg font-medium text-primary">
-              Deneyim, Uzmanlik ve Guven Bir Arada
+              Deneyim, Uzmanlık ve Güven Bir Arada
             </p>
 
             <div className="mb-6">
               <h3 className="mb-3 font-serif text-xl font-bold text-foreground">
-                Minik Gulusler Icin Buyuk Bir Deneyim
+                Minik Gülüşler İçin Büyük Bir Deneyim
               </h3>
               <p className="leading-relaxed text-muted-foreground">
-                Trakyadent Agiz ve Dis Sagligi, 36 yili askin deneyimiyle cocuk
-                dis hekimligi (pedodonti) alaninda yuksek standartlarda saglik
-                hizmeti sunmaktadir. Uzman pedodonti ekibimiz; koruyucu ve tedavi
-                edici uygulamalari, cocuk psikolojisine uygun yaklasimla konforlu
-                bir deneyime donusturur.
+                Trakyadent Ağız ve Diş Sağlığı, 36 yılı aşkın deneyimiyle çocuk
+                diş hekimliği (pedodonti) alanında yüksek standartlarda sağlık
+                hizmeti sunmaktadır. Uzman pedodonti ekibimiz; koruyucu ve tedavi
+                edici uygulamaları, çocuk psikolojisine uygun yaklaşımla konforlu
+                bir deneyime dönüştürür.
               </p>
             </div>
 
             <div>
               <h3 className="mb-3 font-serif text-xl font-bold text-foreground">
-                Bugune Kadar Binlerce Saglikli Guluse Eslik Ettik
+                Bugüne Kadar Binlerce Sağlıklı Gülüşe Eşlik Ettik
               </h3>
               <p className="leading-relaxed text-muted-foreground">
-                36 yildir, binlerce aileye hizmet veren klinigimiz, 4 modern
-                subesi ve hasta memnuniyeti odakli yaklasimiyla cocuklarin dis
-                sagligini guvenle korumaya devam etmektedir.
+                36 yıldır, binlerce aileye hizmet veren kliniğimiz, 4 modern
+                şubesi ve hasta memnuniyeti odaklı yaklaşımıyla çocukların diş
+                sağlığını güvenle korumaya devam etmektedir.
               </p>
             </div>
           </div>

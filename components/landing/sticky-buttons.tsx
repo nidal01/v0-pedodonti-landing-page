@@ -1,7 +1,9 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
-import { MessageCircle, Phone } from "lucide-react"
+import Image from "next/image"
+import { Phone } from "lucide-react"
+import { WhatsAppIcon } from "./whatsapp-icon"
 
 export function StickyButtons() {
   const [show, setShow] = useState(false)
@@ -19,21 +21,21 @@ export function StickyButtons() {
       {/* Desktop: Fixed right side buttons */}
       <div
         className={`fixed bottom-8 right-6 z-50 hidden flex-col gap-3 transition-all duration-500 lg:flex ${
-          show ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0 pointer-events-none"
+          show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-8 opacity-0"
         }`}
       >
         <a
           href="https://wa.me/905001234567"
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] shadow-xl transition-transform hover:scale-110"
-          aria-label="WhatsApp ile iletisime gec"
+          className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-[hsl(142,70%,45%)] text-[hsl(0,0%,100%)] shadow-xl transition-transform hover:scale-110"
+          aria-label="WhatsApp ile iletişime geç"
         >
-          <span className="absolute inset-0 rounded-full bg-[hsl(var(--accent))] animate-pulse-ring" />
-          <MessageCircle className="relative h-6 w-6" />
+          <span className="absolute inset-0 rounded-full bg-[hsl(142,70%,45%)] animate-pulse-ring" />
+          <WhatsAppIcon className="relative h-7 w-7" />
         </a>
         <a
-          href="tel:4442222"
+          href="tel:4442289"
           className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-xl transition-transform hover:scale-110"
           aria-label="Hemen ara"
         >
@@ -52,18 +54,22 @@ export function StickyButtons() {
             href="https://wa.me/905001234567"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-1 items-center justify-center gap-2 bg-[hsl(var(--accent))] py-4 text-sm font-bold text-[hsl(var(--accent-foreground))]"
+            className="flex flex-1 items-center justify-center gap-2 bg-[hsl(142,70%,45%)] py-4 text-sm font-bold text-[hsl(0,0%,100%)]"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon className="h-5 w-5" />
             WhatsApp
           </a>
           <div className="flex items-center justify-center px-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-              <span className="text-sm font-bold text-primary-foreground">T</span>
-            </div>
+            <Image
+              src="/images/trakyadent-logo.png"
+              alt="Trakyadent"
+              width={80}
+              height={32}
+              className="h-8 w-auto object-contain"
+            />
           </div>
           <a
-            href="tel:4442222"
+            href="tel:4442289"
             className="flex flex-1 items-center justify-center gap-2 bg-primary py-4 text-sm font-bold text-primary-foreground"
           >
             <Phone className="h-5 w-5" />
