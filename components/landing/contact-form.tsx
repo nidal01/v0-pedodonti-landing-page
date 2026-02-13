@@ -107,6 +107,7 @@ export function ContactForm() {
                 src="/images/cta-child-teeth.jpg"
                 alt="Mutlu çocuk gülümsemesi"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-[hsl(210,40%,12%)]/30">

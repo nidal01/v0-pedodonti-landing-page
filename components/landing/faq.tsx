@@ -116,6 +116,7 @@ export function FAQ() {
                   src="/images/faq-illustration.jpg"
                   alt="Pedodonti uzmanı çocuk hastaya anlatıyor"
                   fill
+                  sizes="380px"
                   className="object-cover"
                 />
               </div>
