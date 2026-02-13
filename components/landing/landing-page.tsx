@@ -1,6 +1,6 @@
 "use client"
 
-import { TopBar, Navbar } from "./top-bar"
+import { StickyHeader } from "./top-bar"
 import { HeroSlider } from "./hero-slider"
 import { ContactForm } from "./contact-form"
 import { Treatments } from "./treatments"
@@ -17,8 +17,7 @@ import { PopupBanner } from "./popup-banner"
 export function LandingPage() {
   return (
     <>
-      <TopBar />
-      <Navbar />
+      <StickyHeader />
       <main className="pb-16 lg:pb-0">
         <HeroSlider />
         <ContactForm />

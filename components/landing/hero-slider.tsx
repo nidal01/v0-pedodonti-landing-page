@@ -189,8 +189,8 @@ export function HeroSlider() {
           </div>
         ))}
 
-        {/* Google Rating Badge - bottom left */}
-        <div className="absolute bottom-14 left-4 z-10 sm:bottom-20 sm:left-8 lg:bottom-24 lg:left-auto lg:right-32">
+        {/* Google Rating Badge */}
+        <div className="absolute bottom-16 right-4 z-10 sm:bottom-24 sm:right-8 lg:bottom-12 lg:right-12">
           <GoogleBadge />
         </div>
 

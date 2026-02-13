@@ -87,19 +87,19 @@ export function DoctorTeam() {
           {canScrollLeft && (
             <button
               onClick={() => scroll("left")}
-              className="absolute -left-2 top-1/3 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-lg transition-all hover:bg-primary hover:text-primary-foreground lg:-left-4 lg:flex"
+              className="absolute -left-1 top-1/3 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card/90 text-foreground shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-primary-foreground sm:h-11 sm:w-11 lg:-left-4"
               aria-label="Önceki hekimler"
             >
-              <ChevronLeft className="h-5 w-5" />
+              <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
           )}
           {canScrollRight && (
             <button
               onClick={() => scroll("right")}
-              className="absolute -right-2 top-1/3 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-lg transition-all hover:bg-primary hover:text-primary-foreground lg:-right-4 lg:flex"
+              className="absolute -right-1 top-1/3 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card/90 text-foreground shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-primary-foreground sm:h-11 sm:w-11 lg:-right-4"
               aria-label="Sonraki hekimler"
             >
-              <ChevronRight className="h-5 w-5" />
+              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
           )}
 
@@ -152,12 +152,7 @@ export function DoctorTeam() {
             ))}
           </div>
 
-          {/* Scroll indicator for mobile */}
-          <div className="mt-3 flex items-center justify-center gap-1.5 text-xs text-muted-foreground lg:hidden">
-            <ChevronLeft className="h-3.5 w-3.5" />
-            <span>Kaydırarak tüm hekimleri görün</span>
-            <ChevronRight className="h-3.5 w-3.5" />
-          </div>
+
         </div>
 
         {/* Doctor videos section */}
