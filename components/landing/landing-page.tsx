@@ -33,7 +33,7 @@ export function LandingPage() {
         <InlineCTA
           title="Ücretsiz Kontrol Randevusu!"
           subtitle="36 yıllık deneyimimizle çocuğunuzun diş sağlığını kontrol edelim."
-          image="/images/corlu-clinic.jpg"
+          image="/images/5891.jpg.jpeg"
           imageAlt="Trakyadent Çorlu Kliniği"
           reversed
         />
