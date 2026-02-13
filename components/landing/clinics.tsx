@@ -10,7 +10,7 @@ const clinics = [
     name: "Çerkezköy",
     address: "Atatürk Caddesi Mehtap Sokak No:7 Çerkezköy/Tekirdağ",
     phone: "444 22 89",
-    image: "/images/trakyadent-cerkezkoy.webp",
+    image: "/images/clinic-branch.jpg",
     mapUrl: "https://maps.google.com/?q=Trakyadent+%C3%87erkezk%C3%B6y",
   },
   {
