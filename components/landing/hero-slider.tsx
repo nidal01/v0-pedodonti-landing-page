@@ -183,6 +183,12 @@ export function HeroSlider() {
             </div>
           </div>
         ))}
+
+        {/* Google Rating Badge */}
+        <div className="absolute bottom-16 right-4 z-10 sm:bottom-24 sm:right-8 lg:bottom-12 lg:right-12">
+          <GoogleBadge />
+        </div>
+
         {/* Slider controls - desktop only */}
         <button
           onClick={prev}
@@ -198,12 +204,6 @@ export function HeroSlider() {
         >
           <ChevronRight className="h-6 w-6" />
         </button>
-        {/* Google Rating Badge */}
-        <div className="absolute bottom-16 right-4 z-10 sm:bottom-24 sm:right-8 lg:bottom-12 lg:right-12">
-          <GoogleBadge />
-        </div>
-
-
 
         {/* Dots */}
         <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-3 sm:bottom-8">
