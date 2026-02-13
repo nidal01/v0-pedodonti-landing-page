@@ -120,8 +120,8 @@ export function HeroSlider() {
                 <div className="max-w-xl lg:max-w-2xl">
                   <div
                     className={`transition-all duration-700 ${index === current
-                        ? "translate-y-0 opacity-100"
-                        : "translate-y-8 opacity-0"
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-8 opacity-0"
                       }`}
                     style={{ transitionDelay: "200ms" }}
                   >
@@ -132,8 +132,8 @@ export function HeroSlider() {
 
                   <h1
                     className={`mb-3 font-serif text-2xl font-extrabold leading-tight text-[hsl(0,0%,100%)] transition-all duration-700 sm:mb-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl ${index === current
-                        ? "translate-y-0 opacity-100"
-                        : "translate-y-8 opacity-0"
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-8 opacity-0"
                       }`}
                     style={{ transitionDelay: "400ms" }}
                   >
@@ -146,8 +146,8 @@ export function HeroSlider() {
 
                   <p
                     className={`mb-4 max-w-lg text-sm leading-relaxed text-[hsl(0,0%,100%)]/80 transition-all duration-700 sm:mb-6 sm:text-base md:text-lg lg:text-xl ${index === current
-                        ? "translate-y-0 opacity-100"
-                        : "translate-y-8 opacity-0"
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-8 opacity-0"
                       }`}
                     style={{ transitionDelay: "600ms" }}
                   >
@@ -157,8 +157,8 @@ export function HeroSlider() {
                   {/* Desktop buttons */}
                   <div
                     className={`hidden transition-all duration-700 sm:flex sm:flex-row sm:items-center sm:gap-4 ${index === current
-                        ? "translate-y-0 opacity-100"
-                        : "translate-y-8 opacity-0"
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-8 opacity-0"
                       }`}
                     style={{ transitionDelay: "800ms" }}
                   >
@@ -183,7 +183,21 @@ export function HeroSlider() {
             </div>
           </div>
         ))}
-
+        {/* Slider controls - desktop only */}
+        <button
+          onClick={prev}
+          className="absolute bottom-24 right-24 z-10 hidden h-12 w-12 items-center justify-center rounded-full bg-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:bg-[hsl(0,0%,100%)]/40 lg:flex"
+          aria-label="Önceki slayt"
+        >
+          <ChevronLeft className="h-6 w-6" />
+        </button>
+        <button
+          onClick={next}
+          className="absolute bottom-24 right-8 z-10 hidden h-12 w-12 items-center justify-center rounded-full bg-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:bg-[hsl(0,0%,100%)]/40 lg:flex"
+          aria-label="Sonraki slayt"
+        >
+          <ChevronRight className="h-6 w-6" />
+        </button>
         {/* Google Rating Badge */}
         <div className="absolute bottom-16 right-4 z-10 sm:bottom-24 sm:right-8 lg:bottom-12 lg:right-12">
           <GoogleBadge />
@@ -198,8 +212,8 @@ export function HeroSlider() {
               key={i}
               onClick={() => setCurrent(i)}
               className={`h-3 rounded-full transition-all ${i === current
-                  ? "w-8 bg-[hsl(var(--accent))]"
-                  : "w-3 bg-[hsl(0,0%,100%)]/40"
+                ? "w-8 bg-[hsl(var(--accent))]"
+                : "w-3 bg-[hsl(0,0%,100%)]/40"
                 }`}
               aria-label={`Slayt ${i + 1}`}
             />
