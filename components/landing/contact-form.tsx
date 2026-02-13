@@ -21,22 +21,19 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
   if (submitted) {
     return (
       <div
-        className={`rounded-2xl p-8 text-center ${
-          isDark ? "bg-[hsl(var(--accent))]/20" : "bg-[hsl(var(--accent))]/10"
-        }`}
+        className={`rounded-2xl p-8 text-center ${isDark ? "bg-[hsl(var(--accent))]/20" : "bg-[hsl(var(--accent))]/10"
+          }`}
       >
         <CheckCircle className="mx-auto mb-3 h-12 w-12 text-[hsl(var(--accent))]" />
         <h3
-          className={`mb-2 text-xl font-bold ${
-            isDark ? "text-primary-foreground" : "text-foreground"
-          }`}
+          className={`mb-2 text-xl font-bold ${isDark ? "text-primary-foreground" : "text-foreground"
+            }`}
         >
           Talebiniz Alındı!
         </h3>
         <p
-          className={`text-sm ${
-            isDark ? "text-primary-foreground/80" : "text-muted-foreground"
-          }`}
+          className={`text-sm ${isDark ? "text-primary-foreground/80" : "text-muted-foreground"
+            }`}
         >
           En kısa sürede sizinle iletişime geçeceğiz.
         </p>
@@ -52,11 +49,10 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
         required
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-        className={`rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${
-          isDark
+        className={`rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${isDark
             ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
             : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
-        }`}
+          }`}
       />
       <input
         type="tel"
@@ -64,22 +60,20 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
         required
         value={formData.phone}
         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-        className={`rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${
-          isDark
+        className={`rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${isDark
             ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
             : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
-        }`}
+          }`}
       />
       <textarea
         placeholder="Mesajınız (Opsiyonel)"
         rows={2}
         value={formData.message}
         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-        className={`resize-none rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${
-          isDark
+        className={`resize-none rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${isDark
             ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
             : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
-        }`}
+          }`}
       />
       <button
         type="submit"
@@ -110,9 +104,7 @@ export function ContactForm() {
                 className="h-full w-full"
               />
             </div>
-            <p className="mt-3 text-center text-sm font-medium text-primary-foreground/80">
-              Pedodonti Hekimimiz Anlatıyor
-            </p>
+
           </div>
 
           {/* Form */}
