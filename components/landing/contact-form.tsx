@@ -50,8 +50,8 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         className={`rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${isDark
-            ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
-            : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
+          ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
+          : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
           }`}
       />
       <input
@@ -61,8 +61,8 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
         value={formData.phone}
         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
         className={`rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${isDark
-            ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
-            : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
+          ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
+          : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
           }`}
       />
       <textarea
@@ -71,8 +71,8 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
         value={formData.message}
         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
         className={`resize-none rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${isDark
-            ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
-            : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
+          ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
+          : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
           }`}
       />
       <button
@@ -97,7 +97,7 @@ export function ContactForm() {
           <div className="relative overflow-hidden rounded-2xl">
             <div className="aspect-video w-full overflow-hidden rounded-2xl bg-foreground/10">
               <iframe
-                src="https://www.youtube.com/embed/R3iy2821E3A"
+                src="https://www.youtube.com/watch?v=9Go74u4JZYQ"
                 title="Pedodonti Hekimimiz Anlatıyor"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
