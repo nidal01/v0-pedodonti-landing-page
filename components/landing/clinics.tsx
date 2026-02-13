@@ -10,24 +10,28 @@ const clinics = [
     name: "Çerkezköy",
     address: "Atatürk Caddesi Mehtap Sokak No:7 Çerkezköy/Tekirdağ",
     phone: "444 22 89",
+    image: "/images/trakyadent-cerkezkoy.webp",
     mapUrl: "https://maps.google.com/?q=Trakyadent+%C3%87erkezk%C3%B6y",
   },
   {
     name: "Çorlu",
     address: "Ali Paşa Mah. Çetin Emeç Bulvarı Lale Apt. 132/A Çorlu/Tekirdağ",
     phone: "444 22 89",
+    image: "/images/corluuu-841x1024.webp",
     mapUrl: "https://maps.google.com/?q=Trakyadent+%C3%87orlu",
   },
   {
     name: "Lüleburgaz",
     address: "Kocasinan Mah. İstasyon Cd., Canova Apt. No:38/A Lüleburgaz/Kırklareli",
     phone: "444 22 89",
+    image: "/images/luleburgaz1w-841x1024.webp",
     mapUrl: "https://maps.google.com/?q=Trakyadent+L%C3%BCleburgaz",
   },
   {
     name: "Maslak",
     address: "Maslak Mah. Büyükdere Caddesi, Nurol Plaza, No: 255, İç Kapı Z01 Sarıyer/İstanbul",
     phone: "444 22 89",
+    image: "/images/maslak224.webp",
     mapUrl: "https://maps.google.com/?q=Trakyadent+Maslak",
   },
 ]
@@ -58,7 +62,7 @@ export function Clinics() {
               {/* Shared clinic image */}
               <div className="relative h-32 flex-shrink-0 overflow-hidden sm:h-40 lg:h-44">
                 <Image
-                  src="/images/clinic-branch.jpg"
+                  src={clinic.image}
                   alt={`Trakyadent ${clinic.name} Şubesi`}
                   fill
                   sizes="(max-width: 640px) 50vw, 25vw"
