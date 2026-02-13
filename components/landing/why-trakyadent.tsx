@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from "react"
-import { Play, Users, Clock, ThumbsUp, Building2 } from "lucide-react"
+import { Users, Clock, ThumbsUp, Building2 } from "lucide-react"
 
 const stats = [
   {
@@ -56,14 +56,13 @@ export function WhyTrakyadent() {
             }`}
           >
             <div className="aspect-video w-full overflow-hidden rounded-2xl bg-muted">
-              <div className="flex h-full items-center justify-center bg-gradient-to-br from-primary/20 to-[hsl(var(--accent))]/20">
-                <button
-                  className="flex h-20 w-20 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-2xl transition-transform hover:scale-110"
-                  aria-label="Tanıtım videosunu oynat"
-                >
-                  <Play className="ml-1 h-8 w-8" />
-                </button>
-              </div>
+              <iframe
+                src="https://www.youtube.com/embed/R3iy2821E3A"
+                title="Trakyadent Tanıtım"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
+              />
             </div>
           </div>
 

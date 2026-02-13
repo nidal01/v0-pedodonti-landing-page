@@ -1,8 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
-import Image from "next/image"
-import { Send, Play, CheckCircle } from "lucide-react"
+import { Send, CheckCircle } from "lucide-react"
 
 function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" })
@@ -102,22 +101,14 @@ export function ContactForm() {
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Video / visual side */}
           <div className="relative overflow-hidden rounded-2xl">
-            <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-foreground/10">
-              <Image
-                src="/images/cta-child-teeth.jpg"
-                alt="Mutlu çocuk gülümsemesi"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
+            <div className="aspect-video w-full overflow-hidden rounded-2xl bg-foreground/10">
+              <iframe
+                src="https://www.youtube.com/embed/R3iy2821E3A"
+                title="Pedodonti Hekimimiz Anlatıyor"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-[hsl(210,40%,12%)]/30">
-                <button
-                  className="flex h-16 w-16 items-center justify-center rounded-full bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] shadow-2xl transition-transform hover:scale-110 sm:h-20 sm:w-20"
-                  aria-label="Videoyu oynat"
-                >
-                  <Play className="ml-1 h-6 w-6 sm:h-8 sm:w-8" />
-                </button>
-              </div>
             </div>
             <p className="mt-3 text-center text-sm font-medium text-primary-foreground/80">
               Pedodonti Hekimimiz Anlatıyor

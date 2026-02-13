@@ -19,7 +19,6 @@ export function TopBar() {
   return (
     <div className="bg-[hsl(var(--topbar))] text-[hsl(var(--topbar-foreground))]">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-0.5 px-3 py-1.5 sm:flex-row sm:gap-0 sm:px-4 sm:py-2">
-        {/* Slogan - visible on all screens */}
         <span className="text-center text-[11px] font-medium sm:text-left sm:text-sm">
           Trakyadent Pedodonti Merkezi | Sağlıklı Gülüşler İçin Yanınızdayız!
         </span>
@@ -47,19 +46,36 @@ export function TopBar() {
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false)
+  const [isVisible, setIsVisible] = React.useState(true)
   const [isScrolled, setIsScrolled] = React.useState(false)
+  const lastScrollY = React.useRef(0)
 
   React.useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10)
-    window.addEventListener("scroll", handleScroll)
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      setIsScrolled(currentScrollY > 10)
+
+      if (currentScrollY < 100) {
+        setIsVisible(true)
+      } else if (currentScrollY > lastScrollY.current + 5) {
+        // Scrolling down
+        setIsVisible(false)
+        setIsOpen(false)
+      } else if (currentScrollY < lastScrollY.current - 5) {
+        // Scrolling up
+        setIsVisible(true)
+      }
+      lastScrollY.current = currentScrollY
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
     <nav
-      className={`sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur-md transition-shadow ${
+      className={`sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur-md transition-all duration-300 ${
         isScrolled ? "shadow-md" : "shadow-sm"
-      }`}
+      } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:py-5">
         <a href="#hero" className="flex items-center gap-2">

@@ -2,7 +2,7 @@
 
 import React from "react"
 import Image from "next/image"
-import { Phone, MapPin, Instagram, Facebook, Youtube, Twitter } from "lucide-react"
+import { Phone, Instagram, Facebook, Youtube, Twitter } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 export function Footer() {
@@ -87,10 +87,7 @@ export function Footer() {
                   WhatsApp Destek
                 </a>
               </li>
-              <li className="flex items-start gap-2 text-sm text-[hsl(var(--topbar-foreground))]/70">
-                <MapPin className="mt-0.5 h-4 w-4 text-primary" />
-                <span>Çerkezköy, Çorlu, Lüleburgaz, Maslak</span>
-              </li>
+
             </ul>
           </div>
 
