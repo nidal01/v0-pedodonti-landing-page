@@ -18,11 +18,12 @@ const navItems = [
 export function TopBar() {
   return (
     <div className="bg-[hsl(var(--topbar))] text-[hsl(var(--topbar-foreground))]">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-3 py-1.5 sm:px-4 sm:py-2">
-        <span className="hidden text-sm font-medium md:block">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-0.5 px-3 py-1.5 sm:flex-row sm:gap-0 sm:px-4 sm:py-2">
+        {/* Slogan - visible on all screens */}
+        <span className="text-center text-[11px] font-medium sm:text-left sm:text-sm">
           Trakyadent Pedodonti Merkezi | Sağlıklı Gülüşler İçin Yanınızdayız!
         </span>
-        <div className="flex w-full items-center justify-between gap-2 md:w-auto md:justify-end md:gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <a
             href="tel:4442289"
             className="flex items-center gap-1 whitespace-nowrap text-xs transition-colors hover:text-[hsl(var(--chart-4))] sm:gap-1.5 sm:text-sm"
@@ -46,17 +47,28 @@ export function TopBar() {
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false)
+  const [isScrolled, setIsScrolled] = React.useState(false)
+
+  React.useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-card/95 shadow-sm backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+    <nav
+      className={`sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur-md transition-shadow ${
+        isScrolled ? "shadow-md" : "shadow-sm"
+      }`}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:py-5">
         <a href="#hero" className="flex items-center gap-2">
           <Image
             src="/images/trakyadent-logo.png"
             alt="Trakyadent Logo"
-            width={180}
-            height={48}
-            className="h-10 w-auto object-contain"
+            width={200}
+            height={56}
+            className="h-12 w-auto object-contain lg:h-14"
             priority
           />
         </a>
@@ -67,7 +79,7 @@ export function Navbar() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="text-sm font-semibold text-muted-foreground transition-colors hover:text-primary"
+                className="text-sm font-bold text-muted-foreground transition-colors hover:text-primary"
               >
                 {item.label}
               </a>
@@ -79,7 +91,7 @@ export function Navbar() {
           href="https://wa.me/905001234567"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden items-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-4 py-2 text-sm font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105 lg:flex"
+          className="hidden items-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105 lg:flex"
         >
           <WhatsAppIcon className="h-4 w-4" />
           WhatsApp
@@ -114,7 +126,7 @@ export function Navbar() {
                 <a
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block rounded-lg px-3 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
+                  className="block rounded-lg px-3 py-2 text-sm font-bold text-foreground transition-colors hover:bg-muted"
                 >
                   {item.label}
                 </a>

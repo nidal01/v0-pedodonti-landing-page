@@ -109,17 +109,17 @@ export function DoctorTeam() {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {doctors.map((doctor, index) => (
-              <div key={index} className="w-48 flex-shrink-0 sm:w-52 lg:w-56">
+              <div key={index} className="w-44 flex-shrink-0 sm:w-48 lg:w-52">
                 <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
-                  <div className="relative h-48 flex-shrink-0 overflow-hidden sm:h-56">
+                  {/* Image - uncropped with aspect ratio preserved */}
+                  <div className="flex-shrink-0 overflow-hidden bg-muted">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={doctor.image}
                       alt={doctor.name}
-                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="aspect-[570/696] w-full object-contain transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[hsl(210,40%,12%)]/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                   </div>
                   <div className="flex flex-1 flex-col p-3 text-center sm:p-4">
                     <h3 className="mb-0.5 font-serif text-xs font-bold text-foreground sm:text-sm">

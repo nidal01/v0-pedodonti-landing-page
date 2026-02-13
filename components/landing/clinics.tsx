@@ -7,36 +7,28 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 
 const clinics = [
   {
-    name: "Çerkezköy Şubesi",
+    name: "Çerkezköy",
     address: "Atatürk Caddesi Mehtap Sokak No:7 Çerkezköy/Tekirdağ",
     phone: "444 22 89",
-    email: "info@trakyadent.com.tr",
-    mapUrl: "https://maps.google.com/?q=Trakyadent+Çerkezköy",
-    image: "/images/clinic-interior.jpg",
+    mapUrl: "https://maps.google.com/?q=Trakyadent+%C3%87erkezk%C3%B6y",
   },
   {
-    name: "Çorlu Şubesi",
+    name: "Çorlu",
     address: "Ali Paşa Mah. Çetin Emeç Bulvarı Lale Apt. 132/A Çorlu/Tekirdağ",
     phone: "444 22 89",
-    email: "info@trakyadent.com.tr",
-    mapUrl: "https://maps.google.com/?q=Trakyadent+Çorlu",
-    image: "/images/clinic-interior.jpg",
+    mapUrl: "https://maps.google.com/?q=Trakyadent+%C3%87orlu",
   },
   {
-    name: "Lüleburgaz Şubesi",
+    name: "Lüleburgaz",
     address: "Kocasinan Mah. İstasyon Cd., Canova Apt. No:38/A Lüleburgaz/Kırklareli",
     phone: "444 22 89",
-    email: "info@trakyadent.com.tr",
-    mapUrl: "https://maps.google.com/?q=Trakyadent+Lüleburgaz",
-    image: "/images/clinic-interior.jpg",
+    mapUrl: "https://maps.google.com/?q=Trakyadent+L%C3%BCleburgaz",
   },
   {
-    name: "Maslak Şubesi",
+    name: "Maslak",
     address: "Maslak Mah. Büyükdere Caddesi, Nurol Plaza, No: 255, İç Kapı Z01 Sarıyer/İstanbul",
     phone: "444 22 89",
-    email: "info@trakyadent.com.tr",
     mapUrl: "https://maps.google.com/?q=Trakyadent+Maslak",
-    image: "/images/clinic-interior.jpg",
   },
 ]
 
@@ -56,62 +48,61 @@ export function Clinics() {
           </p>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:gap-6">
+        {/* Single row 4-column grid */}
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
           {clinics.map((clinic, index) => (
             <div
               key={index}
-              className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
             >
-              {/* Clinic image */}
-              <div className="relative h-40 overflow-hidden sm:h-48">
+              {/* Shared clinic image */}
+              <div className="relative h-32 flex-shrink-0 overflow-hidden sm:h-40 lg:h-44">
                 <Image
-                  src={clinic.image}
-                  alt={clinic.name}
+                  src="/images/clinic-branch.jpg"
+                  alt={`Trakyadent ${clinic.name} Şubesi`}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(210,40%,12%)]/50 to-transparent" />
-                <div className="absolute bottom-3 left-4">
-                  <span className="rounded-lg bg-primary px-3 py-1.5 text-xs font-bold text-primary-foreground shadow-md sm:text-sm">
+                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(210,40%,12%)]/60 to-transparent" />
+                <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3">
+                  <span className="rounded-lg bg-primary px-2 py-1 text-[10px] font-bold text-primary-foreground shadow-md sm:px-3 sm:py-1.5 sm:text-xs">
                     {clinic.name}
                   </span>
                 </div>
               </div>
 
-              <div className="p-4 sm:p-5">
-                <p className="mb-4 flex items-start gap-2 text-xs text-muted-foreground sm:text-sm">
-                  <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                  {clinic.address}
+              <div className="flex flex-1 flex-col p-3 sm:p-4">
+                <p className="mb-3 flex flex-1 items-start gap-1.5 text-[10px] leading-relaxed text-muted-foreground sm:gap-2 sm:text-xs">
+                  <MapPin className="mt-0.5 h-3 w-3 flex-shrink-0 text-primary sm:h-3.5 sm:w-3.5" />
+                  <span className="line-clamp-3">{clinic.address}</span>
                 </p>
 
-                <div className="flex flex-col gap-2">
-                  <div className="grid grid-cols-2 gap-2">
-                    <a
-                      href={`tel:${clinic.phone.replace(/\s/g, "")}`}
-                      className="flex items-center justify-center gap-1.5 rounded-lg bg-primary/10 px-3 py-2.5 text-xs font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground sm:text-sm"
-                    >
-                      <Phone className="h-3.5 w-3.5" />
-                      {clinic.phone}
-                    </a>
-                    <a
-                      href="https://wa.me/905001234567"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-1.5 rounded-lg bg-[hsl(var(--accent))] px-3 py-2.5 text-xs font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-[1.02] sm:text-sm"
-                    >
-                      <WhatsAppIcon className="h-3.5 w-3.5" />
-                      WhatsApp
-                    </a>
-                  </div>
+                <div className="mt-auto flex flex-col gap-1.5">
+                  <a
+                    href={`tel:${clinic.phone.replace(/\s/g, "")}`}
+                    className="flex items-center justify-center gap-1 rounded-lg bg-primary/10 px-2 py-2 text-[10px] font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground sm:gap-1.5 sm:px-3 sm:text-xs"
+                  >
+                    <Phone className="h-3 w-3" />
+                    {clinic.phone}
+                  </a>
+                  <a
+                    href="https://wa.me/905001234567"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-1 rounded-lg bg-[hsl(var(--accent))] px-2 py-2 text-[10px] font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-[1.02] sm:gap-1.5 sm:px-3 sm:text-xs"
+                  >
+                    <WhatsAppIcon className="h-3 w-3" />
+                    WhatsApp
+                  </a>
                   <a
                     href={clinic.mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 rounded-lg border border-border px-3 py-2 text-xs font-medium text-muted-foreground transition-colors hover:border-primary hover:text-primary sm:text-sm"
+                    className="flex items-center justify-center gap-1 rounded-lg border border-border px-2 py-1.5 text-[10px] font-medium text-muted-foreground transition-colors hover:border-primary hover:text-primary sm:gap-1.5 sm:px-3 sm:py-2 sm:text-xs"
                   >
-                    <Navigation className="h-3.5 w-3.5" />
-                    Yol Tarifi Al
+                    <Navigation className="h-3 w-3" />
+                    Yol Tarifi
                   </a>
                 </div>
               </div>
