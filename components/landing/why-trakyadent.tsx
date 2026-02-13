@@ -51,13 +51,12 @@ export function WhyTrakyadent() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Video */}
           <div
-            className={`relative overflow-hidden rounded-2xl transition-all duration-700 ${
-              visible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
-            }`}
+            className={`relative overflow-hidden rounded-2xl transition-all duration-700 ${visible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
+              }`}
           >
             <div className="aspect-video w-full overflow-hidden rounded-2xl bg-muted">
               <iframe
-                src="https://www.youtube.com/embed/R3iy2821E3A"
+                src="https://www.youtube.com/embed/9Go74u4JZYQ/"
                 title="Trakyadent Tanıtım"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -68,9 +67,8 @@ export function WhyTrakyadent() {
 
           {/* Content */}
           <div
-            className={`transition-all duration-700 ${
-              visible ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
-            }`}
+            className={`transition-all duration-700 ${visible ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
+              }`}
             style={{ transitionDelay: "200ms" }}
           >
             <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
@@ -114,11 +112,10 @@ export function WhyTrakyadent() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`group flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg ${
-                visible
+              className={`group flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg ${visible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-8 opacity-0"
-              }`}
+                }`}
               style={{ transitionDelay: `${(index + 2) * 150}ms` }}
             >
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary">
