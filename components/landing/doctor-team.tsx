@@ -141,7 +141,7 @@ export function DoctorTeam() {
 
           <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {[
-              { id: "Z7qlOedllMg", title: "Çocuklarda Dijital Anestezi Nedir? Daha Konforlu Bir Tedavi Mümkün mü?" },
+              { id: "Z7qlOedllMg", title: "Çocuklarda Dijital Anestezi Nedir?" },
               { id: "X6oyv-MlckM", title: "Diş Eti Çekilmesi ve Tedavileri" },
               { id: "fqW77gXINag", title: "Diş Taşı Temizliği, Diş İpi Kullanımı" },
             ].map((video) => (
