@@ -2,7 +2,7 @@
 
 import React from "react"
 import Image from "next/image"
-import { Phone, MapPin, Instagram, Facebook, Youtube, Twitter } from "lucide-react"
+import { Phone, MapPin, Instagram, Youtube } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 export function Footer() {
@@ -27,14 +27,14 @@ export function Footer() {
             </p>
             <div className="flex gap-3">
               {[
-                { icon: Instagram, label: "Instagram" },
-                { icon: Facebook, label: "Facebook" },
-                { icon: Youtube, label: "YouTube" },
-                { icon: Twitter, label: "Twitter" },
+                { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/trakyadent/" },
+                { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@trakyadentdentalhealthgrou3384" },
               ].map((social) => (
                 <a
                   key={social.label}
-                  href="#"
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
                   className="flex h-10 w-10 items-center justify-center rounded-lg bg-[hsl(var(--topbar-foreground))]/10 transition-colors hover:bg-primary"
                 >
