@@ -6,7 +6,7 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 
 const doctors = [
   { name: "Dt. Subaykan PANDAR", title: "Kurucu Yönetim Kurulu Üyesi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/subaykan-pandar-1-570x696.jpg" },
-  { name: "Dt. Emre PANDAR", title: "Pedodonti Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/11/emre-pandar-2-570x696.jpg" },
+  { name: "Dt. Emre PANDAR", title: "Yönetim Kurulu Başkanı", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/11/emre-pandar-2-570x696.jpg" },
   { name: "Dt. Demet PANDAR", title: "Pedodonti Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/10/dt-demet-pandar-0001-570x696.jpg" },
   { name: "Dt. Bahar AKSAN YENİLMEZ", title: "Pedodonti Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/bahar-hanim-570x696.jpg" },
   { name: "Dt. Gamze KILIÇ", title: "Pedodonti Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/12/gamze-hoca-yeni-570x696.jpg" },
