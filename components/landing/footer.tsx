@@ -130,12 +130,12 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 px-4 py-4 text-center text-xs text-[hsl(var(--topbar-foreground))]/50 md:flex-row md:justify-between">
           <p>
             &copy; 2026 Trakyadent Ağız ve Diş Sağlığı. Tüm hakları saklıdır.
-          </p> <br>
-            <p>Yazılım ve Tasarım: "Need Solutions</p>
-            <p className="max-w-lg font-medium text-[hsl(var(--topbar-foreground))]/60">
-              Sayfa içeriği sadece bilgilendirme amaçlıdır. Tanı ve tedavi için
-              mutlaka doktorunuza başvurunuz.
-            </p>
+          </p>
+          <p>Yazılım ve Tasarım: "Need Solutions</p>
+          <p className="max-w-lg font-medium text-[hsl(var(--topbar-foreground))]/60">
+            Sayfa içeriği sadece bilgilendirme amaçlıdır. Tanı ve tedavi için
+            mutlaka doktorunuza başvurunuz.
+          </p>
         </div>
       </div>
     </footer>
