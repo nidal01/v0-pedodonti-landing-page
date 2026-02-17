@@ -127,7 +127,7 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-[hsl(var(--topbar-foreground))]/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 px-4 py-4 text-center text-xs text-[hsl(var(--topbar-foreground))]/50 md:flex-row md:justify-between">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-4 text-center text-xs text-[hsl(var(--topbar-foreground))]/50 md:flex-row md:justify-between">
           <p>
             &copy; 2026 Trakyadent Ağız ve Diş Sağlığı. Tüm hakları saklıdır.
           </p>
@@ -136,11 +136,20 @@ export function Footer() {
             Sayfa içeriği sadece bilgilendirme amaçlıdır. Tanı ve tedavi için
             mutlaka doktorunuza başvurunuz.
           </p>
-          <p>Yazılım ve Tasarım: "Need Solutions</p>
+
+          <p>
+            Yazılım ve Tasarım:{" "}
+            <a
+              href="https://www.needsolutions.com.tr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white font-bold hover:underline"
+            >
+              Need Solutions
+            </a>
+          </p>
         </div>
-
       </div>
-
     </footer>
   )
 }
