@@ -136,8 +136,9 @@ export function Footer() {
             Sayfa içeriği sadece bilgilendirme amaçlıdır. Tanı ve tedavi için
             mutlaka doktorunuza başvurunuz.
           </p>
+          <p>Yazılım ve Tasarım: "Need Solutions</p>
         </div>
-        <p>Yazılım ve Tasarım: "Need Solutions</p>
+
       </div>
 
     </footer>
