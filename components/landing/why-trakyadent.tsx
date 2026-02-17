@@ -75,7 +75,7 @@ export function WhyTrakyadent() {
               Neden Trakyadent?
             </span>
             <h2 className="mb-2 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
-              Çocuğunuzun Diş Sağlığı İçin Doğru Adres!
+              Çocuğunuzun Diş Sağlığı İçin Doğru Adres Maslak Trakyadent!
             </h2>
             <p className="mb-6 text-lg font-medium text-primary">
               Deneyim, Uzmanlık ve Güven Bir Arada
@@ -113,8 +113,8 @@ export function WhyTrakyadent() {
             <div
               key={index}
               className={`group flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg ${visible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-8 opacity-0"
+                ? "translate-y-0 opacity-100"
+                : "translate-y-8 opacity-0"
                 }`}
               style={{ transitionDelay: `${(index + 2) * 150}ms` }}
             >
