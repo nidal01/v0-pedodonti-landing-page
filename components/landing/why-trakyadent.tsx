@@ -78,7 +78,7 @@ export function WhyTrakyadent() {
                 </>
               ) : (
                 <iframe
-                  src="https://www.youtube.com/embed/9Go74u4JZYQ?autoplay=1"
+                  src="https://www.youtube.com/embed/gGiEMZudaD4?autoplay=1"
                   title="Trakyadent Tanıtım"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
