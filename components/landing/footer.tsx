@@ -131,6 +131,7 @@ export function Footer() {
           <p>
             &copy; 2026 Trakyadent Ağız ve Diş Sağlığı. Tüm hakları saklıdır.
           </p>
+          <p>Yazılım ve Tasarım: "Need Solutions</p>
           <p className="max-w-lg font-medium text-[hsl(var(--topbar-foreground))]/60">
             Sayfa içeriği sadece bilgilendirme amaçlıdır. Tanı ve tedavi için
             mutlaka doktorunuza başvurunuz.
