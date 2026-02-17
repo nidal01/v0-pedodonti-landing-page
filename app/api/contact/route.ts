@@ -13,21 +13,45 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    const smtpHost = process.env.SMTP_HOST
+    const smtpPort = process.env.SMTP_PORT
+    const smtpUser = process.env.SMTP_USER
+    const smtpPass = process.env.SMTP_PASS
+    const mailTo = process.env.MAIL_TO
+
+    if (!smtpHost || !smtpPort || !smtpUser || !smtpPass || !mailTo) {
+      console.error("[v0] Missing SMTP environment variables")
+      return NextResponse.json(
+        { error: "Sunucu e-posta ayarları eksik. Lütfen daha sonra tekrar deneyin." },
+        { status: 500 }
+      )
+    }
+
+    const parsedPort = Number(smtpPort)
+
+    if (!Number.isInteger(parsedPort) || parsedPort <= 0) {
+      console.error("[v0] Invalid SMTP_PORT value")
+      return NextResponse.json(
+        { error: "Sunucu e-posta ayarları geçersiz. Lütfen daha sonra tekrar deneyin." },
+        { status: 500 }
+      )
+    }
+
     // Create transporter with SMTP settings
     const transporter = nodemailer.createTransport({
-      host: "mail.trakyadentsmile.com",
-      port: 465,
-      secure: true, // true for 465, false for other ports
+      host: smtpHost,
+      port: parsedPort,
+      secure: parsedPort === 465, // true for 465, false for other ports
       auth: {
-        user: "info@trakyadentsmile.com",
-        pass: "221DlR?L[LzmqzM9",
+        user: smtpUser,
+        pass: smtpPass,
       },
     })
 
     // Email content
     const mailOptions = {
-      from: '"Trakyadent Website" <info@trakyadentsmile.com>',
-      to: "nidalirfanuymaz@gmail.com",
+      from: `"Trakyadent Website" <${smtpUser}>`,
+      to: mailTo,
       subject: `Yeni İletişim Formu - ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f5f5f5;">
