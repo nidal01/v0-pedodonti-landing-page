@@ -14,9 +14,9 @@ const nunitoSans = Nunito_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Trakyadent Pedodonti Maslak | Çocuk Diş Hekimliği Uzmanı',
+  title: 'Trakyadent Pedodonti | Çocuk Diş Sağlığı Merkezi',
   description:
-    'Trakyadent Pedodonti Maslak - 36 yıllık deneyim ve uzman kadromuzla çocuğunuzun diş sağlığını güvenle geleceğe taşıyoruz. Dijital anestezi ile ağrısız tedavi. İstanbul Maslak\'ta hizmetinizdeyiz.',
+    'Trakyadent Pedodonti Merkezi - Çocuk diş sağlığında uzman çözüm. 36 yıllık deneyim, dijital anestezi ve korkusuz tedavi yaklaşımı. Hemen randevu alın!',
   icons: {
     icon: '/images/favicon.png',
     shortcut: '/images/favicon.png',
