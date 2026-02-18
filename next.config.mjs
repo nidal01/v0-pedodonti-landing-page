@@ -1,19 +1,11 @@
 /** @type {import('next').NextConfig} */
- codex/configure-deployment-for-subdirectory-mo0f6z
-const rawBasePath = process.env.BASE_PATH || ""
+const rawBasePath = process.env.BASE_PATH || process.env.NEXT_PUBLIC_BASE_PATH || ""
 const normalizedBasePath = rawBasePath
   ? `/${rawBasePath.replace(/^\/+|\/+$/g, "")}`
   : ""
 
 const nextConfig = {
   basePath: normalizedBasePath || undefined,
-
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
-
-const nextConfig = {
-  basePath,
-  assetPrefix: basePath || undefined,
- main
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -25,6 +17,22 @@ const nextConfig = {
         pathname: "/wp-content/uploads/**",
       },
     ],
+  },
+  async rewrites() {
+    if (normalizedBasePath) {
+      return []
+    }
+
+    return [
+      {
+        source: "/pedodonti",
+        destination: "/",
+      },
+      {
+        source: "/pedodonti/:path*",
+        destination: "/:path*",
+      },
+    ]
   },
 }
 
