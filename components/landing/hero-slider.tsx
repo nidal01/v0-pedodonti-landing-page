@@ -9,7 +9,7 @@ const slides = [
   {
     image: "/images/hero-child-smile.jpg",
     title: "Çocuk Diş Sağlığında Uzman Çözüm",
-    titleHighlight: "Trakyadent Pedodonti",
+    titleHighlight: "Trakyadent Kids",
     subtitle:
       "Minik gülüşler için korkusuz, güvenli ve sevgi dolu bir diş tedavi deneyimi",
   },
