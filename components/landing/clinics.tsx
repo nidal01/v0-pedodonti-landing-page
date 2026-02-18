@@ -38,6 +38,15 @@ export function Clinics() {
         {/* Maslak Info Card */}
         <div className="mb-8 overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-lg sm:p-8 lg:mb-12">
           <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
+            <div className="relative h-48 w-full flex-shrink-0 overflow-hidden rounded-xl sm:h-56 sm:w-72">
+              <Image
+                src="/images/17 (2).webp"
+                alt="Trakyadent Maslak Kliniği"
+                fill
+                sizes="(max-width: 640px) 100vw, 288px"
+                className="object-cover"
+              />
+            </div>
             <div className="flex-1">
               <h3 className="mb-3 font-serif text-2xl font-extrabold text-foreground">
                 Trakyadent Maslak Pedodonti Merkezi
