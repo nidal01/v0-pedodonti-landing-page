@@ -36,19 +36,37 @@ Vercel sana DNS kayıtlarını verecek. Genelde:
 
 > Not: DNS yönetimini domaini aldığın firmadan (Cloudflare, Namecheap, Turhost vb.) yaparsın.
 
-## 4) DNS propagasyonunu bekle
+## 4) Bu projeyi `/pedodonti` altında yayınlama
+
+Bu repo artık `BASE_PATH` değişkeni ile alt dizin altında çalışacak şekilde ayarlı (örnek: `/pedodonti`).
+
+### Vercel ayarı
+
+- **Project → Settings → Environment Variables**
+- Production (ve Preview gerekirse) için ekle:
+  - `BASE_PATH=/pedodonti`
+- Sonra **Redeploy** yap.
+
+### Önemli not (path bazlı yayın)
+
+Ek olarak `vercel.json` içinde `/` -> `/pedodonti` geçici yönlendirmesi var; böylece domain köküne gelen kullanıcılar 404 yerine landing sayfaya düşer.
+
+
+- DNS tek başına `trakyadentmaslak.com/pedodonti` yönlendirmesi yapamaz.
+- Eğer ana domain (`trakyadentmaslak.com`) başka bir yerde host ediliyorsa, `/pedodonti` path'ini bu Vercel projesine reverse proxy ile yönlendirmen gerekir (Cloudflare Worker/Rules, Nginx, vb.).
+- Eğer domain tamamen bu Vercel projesine bağlıysa, site `trakyadentmaslak.com/pedodonti` altında açılır.
+
+## 5) DNS propagasyonunu bekle
 
 - Genellikle 5 dk – 24 saat.
 - Vercel Domains ekranında "Valid Configuration" görünce tamamdır.
 
-## 5) SSL (HTTPS)
+## 6) SSL (HTTPS)
 
 - Vercel otomatik Let's Encrypt SSL tanımlar.
 - `https://domainin.com` çalıştığını doğrula.
 
-## 6) Form/API için güvenli ayar (öneri)
-
-
+## 7) Form/API için güvenli ayar (öneri)
 
 Örnek değişkenler:
 
@@ -63,7 +81,7 @@ Vercel:
 - **Project → Settings → Environment Variables**
 - Sonra **Redeploy** yap.
 
-## 7) İsteğe bağlı: GitHub Pages neden uygun değil?
+## 8) İsteğe bağlı: GitHub Pages neden uygun değil?
 
 Bu repo Next.js server-side özellikleri ve API route içerdiği için GitHub Pages doğrudan uygun değildir.
 
