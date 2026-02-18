@@ -63,7 +63,7 @@ export function StickyHeader() {
         <div className="bg-[hsl(var(--topbar))] text-[hsl(var(--topbar-foreground))]">
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-0.5 px-3 py-1.5 sm:flex-row sm:gap-0 sm:px-4 sm:py-2">
             <span className="text-center text-[11px] font-medium sm:text-left sm:text-sm">
-              Trakyadent Pedodonti Merkezi | Sağlıklı Gülüşler İçin Yanınızdayız!
+              Trakyadent Kids | Sağlıklı Gülüşler İçin Yanınızdayız!
             </span>
             <div className="flex items-center gap-2 sm:gap-4">
               <a

@@ -36,7 +36,7 @@ const treatments = [
     title: "Koruyucu Diş Tedavileri",
     shortDesc: "Fissür örtücü ve flor uygulamaları ile çocuğunuzun dişlerini çürüğe karşı koruyoruz.",
     longDesc:
-      "Koruyucu diş hekimliği, çocuğunuzun dişlerini çürük oluşmadan koruyan en etkili yöntemdir. Trakyadent Pedodonti Merkezi olarak, çocuklara özel koruyucu tedaviler ile sağlıklı gülüşlerin temelini atıyoruz.",
+      "Koruyucu diş hekimliği, çocuğunuzun dişlerini çürük oluşmadan koruyan en etkili yöntemdir. Trakyadent Kids olarak, çocuklara özel koruyucu tedaviler ile sağlıklı gülüşlerin temelini atıyoruz.",
     benefits: [
       "Fissür örtücü uygulaması ile çürük riskini minimuma indirir",
       "Profesyonel flor uygulaması ile diş minesini güçlendirir",
@@ -228,8 +228,8 @@ export function Treatments() {
                   <button
                     onClick={() => setMobileOpen(isOpen ? null : index)}
                     className={`flex w-full items-center gap-3 px-4 py-3.5 text-left transition-colors ${isOpen
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-card text-foreground"
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-card text-foreground"
                       }`}
                   >
                     <div
@@ -269,8 +269,8 @@ export function Treatments() {
                   key={index}
                   onClick={() => setActiveTab(index)}
                   className={`flex items-center gap-3 rounded-xl px-4 py-3 text-left transition-all ${activeTab === index
-                      ? "bg-primary text-primary-foreground shadow-lg"
-                      : "border border-border bg-card text-foreground hover:bg-muted"
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "border border-border bg-card text-foreground hover:bg-muted"
                     }`}
                 >
                   <treatment.icon
@@ -294,7 +294,7 @@ export function Treatments() {
                       {activeTreatment.title}
                     </h3>
                     <p className="mt-1 text-sm font-medium text-primary">
-                      Trakyadent Pedodonti Merkezi
+                      Trakyadent Kids
                     </p>
                   </div>
                 </div>

@@ -101,11 +101,11 @@ export function Footer() {
             <ul className="flex flex-col gap-2 text-sm text-[hsl(var(--topbar-foreground))]/70">
               <li className="flex justify-between">
                 <span>Pazartesi - Cuma</span>
-                <span>09:00 - 21:00</span>
+                <span>09:30 - 19:00</span>
               </li>
               <li className="flex justify-between">
                 <span>Cumartesi</span>
-                <span>09:00 - 18:00</span>
+                <span>09:30 - 18:00</span>
               </li>
               <li className="flex justify-between">
                 <span>Pazar</span>

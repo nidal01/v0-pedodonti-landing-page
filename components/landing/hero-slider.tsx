@@ -9,7 +9,7 @@ const slides = [
   {
     image: "/images/hero-child-smile.jpg",
     title: "Çocuk Diş Sağlığında Uzman Çözüm",
-    titleHighlight: "Trakyadent Pedodonti",
+    titleHighlight: "Trakyadent Kids",
     subtitle:
       "Minik gülüşler için korkusuz, güvenli ve sevgi dolu bir diş tedavi deneyimi",
   },
@@ -130,7 +130,7 @@ export function HeroSlider() {
                     style={{ transitionDelay: "200ms" }}
                   >
                     <span className="mb-3 inline-block rounded-full bg-[hsl(var(--accent))]/20 px-3 py-1 text-xs font-semibold text-[hsl(var(--accent))] sm:mb-4 sm:px-4 sm:py-1.5 sm:text-sm">
-                      Trakyadent Pedodonti Merkezi
+                      Trakyadent Kids
                     </span>
                   </div>
 
