@@ -38,18 +38,15 @@ Vercel sana DNS kayıtlarını verecek. Genelde:
 
 ## 4) Bu projeyi `/pedodonti` altında yayınlama
 
-Bu repo artık `BASE_PATH` değişkeni ile alt dizin altında çalışacak şekilde ayarlı (örnek: `/pedodonti`).
 
 ### Vercel ayarı
 
 - **Project → Settings → Environment Variables**
 - Production (ve Preview gerekirse) için ekle:
-  - `BASE_PATH=/pedodonti`
+
 - Sonra **Redeploy** yap.
 
 ### Önemli not (path bazlı yayın)
-
-Ek olarak `vercel.json` içinde `/` -> `/pedodonti` geçici yönlendirmesi var; böylece domain köküne gelen kullanıcılar 404 yerine landing sayfaya düşer.
 
 
 - DNS tek başına `trakyadentmaslak.com/pedodonti` yönlendirmesi yapamaz.
