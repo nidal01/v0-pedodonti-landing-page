@@ -41,7 +41,7 @@ export function Clinics() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="mx-auto mb-10 max-w-2xl text-center lg:mb-16">
           <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
-            Şubelerimiz
+            Kliniğimiz
           </span>
           <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
             {"Size En Yakın Trakyadent'teyiz!"}
