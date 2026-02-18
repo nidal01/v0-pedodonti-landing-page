@@ -10,29 +10,14 @@ const maslak = {
   address: "Maslak Mah. Büyükdere Caddesi, Nurol Plaza, No: 255, İç Kapı Z01 Sarıyer/İstanbul",
   phone: "0212 912 68 67",
   whatsapp: "905417265212",
-  image: "/images/maslak224.webp",
+  image: "/images/17 (2).webp",
   mapUrl: "https://maps.google.com/?q=Trakyadent+Maslak",
 }
 
-const otherClinics = [
-  {
-    name: "Çerkezköy",
-    phone: "0212 912 68 67",
-    whatsapp: "905417265212",
-    image: "/images/trakyadent-cerkezkoy.webp",
-  },
-  {
-    name: "Çorlu",
-    phone: "0212 912 68 67",
-    whatsapp: "905417265212",
-    image: "/images/corluuu-841x1024.webp",
-  },
-  {
-    name: "Lüleburgaz",
-    phone: "0212 912 68 67",
-    whatsapp: "905417265212",
-    image: "/images/luleburgaz1w-841x1024.webp",
-  },
+const galleryImages = [
+  { src: "/images/3 (2).webp", alt: "Trakyadent Maslak Kliniği - Bekleme Alanı" },
+  { src: "/images/5 (1).webp", alt: "Trakyadent Maslak Kliniği - Tedavi Odası" },
+  { src: "/images/4 (1).webp", alt: "Trakyadent Maslak Kliniği - Resepsiyon" },
 ]
 
 export function Clinics() {
@@ -41,7 +26,7 @@ export function Clinics() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="mx-auto mb-10 max-w-2xl text-center lg:mb-16">
           <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
-            Şubelerimiz
+            Kliniğimiz
           </span>
           <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
             {"Size En Yakın Trakyadent'teyiz!"}
@@ -98,53 +83,28 @@ export function Clinics() {
             </div>
           </div>
         </div>
-
-        {/* Other 3 clinics */}
-        <div className="grid grid-cols-3 gap-4 lg:gap-6">
-          {otherClinics.map((clinic, index) => (
+        {/* Gallery */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+          {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="relative h-28 flex-shrink-0 overflow-hidden sm:h-36 lg:h-44">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src={clinic.image}
-                  alt={`Trakyadent ${clinic.name} Şubesi`}
+                  src={image.src}
+                  alt={image.alt}
                   fill
-                  sizes="33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(210,40%,12%)]/60 to-transparent" />
-                <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3">
-                  <span className="rounded-lg bg-primary px-2 py-1 text-[10px] font-bold text-primary-foreground shadow-md sm:px-3 sm:py-1.5 sm:text-xs">
-                    {clinic.name}
-                  </span>
-                </div>
-              </div>
-              <div className="flex flex-1 flex-col p-2.5 sm:p-3">
-                <div className="mt-auto flex flex-col gap-1.5">
-                  <a
-                    href={`tel:${clinic.phone.replace(/\s/g, "")}`}
-                    className="flex items-center justify-center gap-1 rounded-lg bg-primary/10 px-2 py-2 text-[8px] font-semibold leading-tight text-primary transition-colors hover:bg-primary hover:text-primary-foreground sm:gap-1.5 sm:px-3 sm:text-xs"
-                    title={clinic.phone}
-                  >
-                    <Phone className="h-3 w-3 flex-shrink-0" />
-                    <span className="whitespace-nowrap tracking-tighter">{clinic.phone}</span>
-                  </a>
-                  <a
-                    href={`https://wa.me/${clinic.whatsapp}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-1 rounded-lg bg-[hsl(var(--accent))] px-2 py-2 text-[10px] font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-[1.02] sm:gap-1.5 sm:px-3 sm:text-xs"
-                  >
-                    <WhatsAppIcon className="h-3 w-3" />
-                    WhatsApp
-                  </a>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(210,40%,12%)]/40 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               </div>
             </div>
           ))}
         </div>
+
+
       </div>
     </section>
   )

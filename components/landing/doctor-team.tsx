@@ -8,8 +8,8 @@ const doctors = [
   { name: "Dt. Subaykan PANDAR", title: "Kurucu Yönetim Kurulu Üyesi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/subaykan-pandar-1-570x696.jpg" },
   { name: "Dt. Emre PANDAR", title: "Yönetim Kurulu Başkanı", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/11/emre-pandar-2-570x696.jpg" },
   { name: "Dt. Demet PANDAR", title: "Yönetim Kurulu Üyesi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/10/dt-demet-pandar-0001-570x696.jpg" },
-  { name: "Dt. Bahar AKSAN YENİLMEZ", title: "Pedodonti Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/bahar-hanim-570x696.jpg" },
-  { name: "Dt. Gamze KILIÇ", title: "Pedodonti Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/12/gamze-hoca-yeni-570x696.jpg" },
+  { name: "Uzm. Dt. Bahar AKSAN YENİLMEZ", title: "Pedodonti Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/bahar-hanim-570x696.jpg" },
+  { name: "Uzm. Dt. Gamze KILIÇ", title: "Pedodonti Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/12/gamze-hoca-yeni-570x696.jpg" },
 ]
 
 export function DoctorTeam() {
@@ -143,7 +143,7 @@ export function DoctorTeam() {
             {[
               { id: "Z7qlOedllMg", title: "Çocuklarda Dijital Anestezi Nedir?" },
               { id: "u-KTlvfIJ-Y", title: "Çocuk Diş Tedavisinde Rubber-Dam Kullanımı" },
-              { id: "DYdWjc_PL-c", title: "Çocuklarda Lokal Anestezi Korkusu Nasıl Azaltılır?" },
+              { id: "BF19lesZckw", title: "Çocuklarda ilk diş muayenesi nasıl yapılmalıdır?" },
             ].map((video) => (
               <div
                 key={video.id}

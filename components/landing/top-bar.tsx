@@ -8,7 +8,7 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 const navItems = [
   { label: "Anasayfa", href: "#hero" },
   { label: "Tedavilerimiz", href: "#tedaviler" },
-  { label: "Şubelerimiz", href: "#klinikler" },
+  { label: "Kliniğimiz", href: "#klinikler" },
   { label: "Neden Trakyadent", href: "#neden-trakyadent" },
   { label: "Ekibimiz", href: "#ekibimiz" },
   { label: "SSS", href: "#sss" },
