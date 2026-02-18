@@ -143,7 +143,7 @@ export function DoctorTeam() {
             {[
               { id: "Z7qlOedllMg", title: "Çocuklarda Dijital Anestezi Nedir?" },
               { id: "u-KTlvfIJ-Y", title: "Çocuk Diş Tedavisinde Rubber-Dam Kullanımı" },
-              { id: "DYdWjc_PL-c", title: "Çocuklarda Lokal Anestezi Korkusu Nasıl Azaltılır?" },
+              { id: "BF19lesZckw", title: "Çocuklarda ilk diş muayenesi nasıl yapılmalıdır?" },
             ].map((video) => (
               <div
                 key={video.id}
