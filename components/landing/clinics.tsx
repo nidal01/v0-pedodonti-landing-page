@@ -10,7 +10,7 @@ const maslak = {
   address: "Maslak Mah. Büyükdere Caddesi, Nurol Plaza, No: 255, İç Kapı Z01 Sarıyer/İstanbul",
   phone: "0212 912 68 67",
   whatsapp: "905417265212",
-  image: "/images/maslak224.webp",
+  image: "/images/17 (2).webp",
   mapUrl: "https://maps.google.com/?q=Trakyadent+Maslak",
 }
 
