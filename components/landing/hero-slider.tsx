@@ -22,7 +22,31 @@ const slides = [
   },
 ]
 
-
+function GoogleBadge() {
+  return (
+    <div className="inline-flex items-center gap-1.5 rounded-lg bg-[hsl(210,40%,12%)]/70 px-2 py-1.5 backdrop-blur-md sm:gap-4 sm:rounded-2xl sm:px-5 sm:py-3">
+      {/* Google G */}
+      <svg viewBox="0 0 48 48" className="h-5 w-5 flex-shrink-0 sm:h-10 sm:w-10">
+        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+      </svg>
+      <div>
+        <p className="text-[8px] font-semibold text-[hsl(0,0%,100%)]/80 sm:text-xs">Google Değerlendirme</p>
+        <div className="flex items-center gap-0.5 sm:gap-1">
+          <span className="text-xs font-extrabold text-[hsl(0,0%,100%)] sm:text-xl">4.8</span>
+          <div className="flex">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="h-2 w-2 fill-[hsl(43,96%,56%)] text-[hsl(43,96%,56%)] sm:h-4 sm:w-4" />
+            ))}
+          </div>
+        </div>
+        <p className="text-[7px] text-[hsl(0,0%,100%)]/60 sm:text-[11px]">4.400+ Değerlendirme</p>
+      </div>
+    </div>
+  )
+}
 
 export function HeroSlider() {
   const [current, setCurrent] = useState(0)
@@ -93,10 +117,7 @@ export function HeroSlider() {
             <div className="absolute inset-0 flex items-center">
               <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
                 <div className="max-w-xl lg:max-w-2xl">
-                  {/* Google Badge on mobile - above title */}
-                  <div className="mb-4 sm:hidden">
-                    <GoogleBadge />
-                  </div>
+                  
 
                   <div
                     className={`transition-all duration-700 ${index === current
@@ -164,10 +185,7 @@ export function HeroSlider() {
           </div>
         ))}
 
-        {/* Google Rating Badge - hidden on mobile, shown on sm+ */}
-        <div className="absolute bottom-20 right-2 z-10 hidden sm:bottom-24 sm:right-8 sm:block lg:bottom-12 lg:right-12">
-          <GoogleBadge />
-        </div>
+       
 
         {/* Slider controls - desktop only */}
         <button
