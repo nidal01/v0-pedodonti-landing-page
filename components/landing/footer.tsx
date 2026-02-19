@@ -28,7 +28,7 @@ export function Footer() {
             <div className="flex gap-3">
               {[
                 { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/trakyadent/" },
-                { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@trakyadentdentalhealthgrou3384" },
+                { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@trakyadent" },
               ].map((social) => (
                 <a
                   key={social.label}
