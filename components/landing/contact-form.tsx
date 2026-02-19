@@ -1,19 +1,23 @@
 "use client"
 
 import React, { useState } from "react"
+import { useRouter } from "next/navigation"
 import { Send, CheckCircle } from "lucide-react"
 
 function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" })
   const [submitted, setSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
+
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(`${basePath}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -21,10 +25,10 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
 
       if (response.ok) {
         setSubmitted(true)
+        setFormData({ name: "", phone: "", message: "" })
         setTimeout(() => {
-          setSubmitted(false)
-          setFormData({ name: "", phone: "", message: "" })
-        }, 3000)
+          router.push(`${basePath}/tesekkurler.html`)
+        }, 800)
       } else {
         alert("Mesaj gönderilemedi. Lütfen tekrar deneyin.")
       }
@@ -55,7 +59,7 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
           className={`text-sm ${isDark ? "text-primary-foreground/80" : "text-muted-foreground"
             }`}
         >
-          En kısa sürede sizinle iletişime geçeceğiz.
+          Teşekkürler! Yönlendiriliyorsunuz...
         </p>
       </div>
     )
