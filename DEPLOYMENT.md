@@ -85,6 +85,8 @@ Vercel:
 
 - **Project → Settings → Environment Variables**
 - Sonra **Redeploy** yap.
+- Not: Env eksikse bile uygulama `vercel` üzerinde `/pedodonti` isteklerini rewrites ile root'a düşürür; böylece `/pedodonti` 404 vermez.
+- Not: `BASE_PATH` aktifken `/images/*` istekleri otomatik olarak `/pedodonti/images/*` yoluna yönlendirilir; böylece görseller root path'ten çağrılsa da kırılmaz.
 
 ## 8) İsteğe bağlı: GitHub Pages neden uygun değil?
 
