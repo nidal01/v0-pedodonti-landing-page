@@ -48,8 +48,9 @@ Bu repo `BASE_PATH` (geriye dönük uyum için `NEXT_PUBLIC_BASE_PATH` da destek
 - Sonra **Redeploy** yap.
 - Not: Env eksikse bile uygulama `vercel` üzerinde `/pedodonti` isteklerini rewrites ile root'a düşürür; böylece `/pedodonti` 404 vermez.
 - Not: `BASE_PATH` aktifken `/images/*` istekleri otomatik olarak `/pedodonti/images/*` yoluna yönlendirilir; böylece görseller root path'ten çağrılsa da kırılmaz.
-- Not: `BASE_PATH` aktifken `/api/*` istekleri de `/pedodonti/api/*` yoluna yönlendirilir; bu sayede iletişim formu endpoint'i (`/api/contact`) kırılmaz.
-- Form başarılı gönderimde kullanıcı `${BASE_PATH}/tesekkurler.html` sayfasına yönlendirilir.
+- Not: `BASE_PATH` aktifken `/api/*` istekleri de `/pedodonti/api/*` yoluna yönlendirilir; bu sayede iletişim formu endpoint'i (`/pedodonti/api/contact`) kırılmaz.
+- Form başarılı gönderimde kullanıcı `/tesekkur.html` sayfasına yönlendirilir.
+- GTM kodları sadece `/tesekkur.html` sayfasına eklendi (global layouta değil).
 
 ### Önemli not (path bazlı yayın)
 

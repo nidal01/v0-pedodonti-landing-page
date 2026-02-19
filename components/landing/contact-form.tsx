@@ -10,14 +10,12 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
 
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
 
     try {
-      const response = await fetch(`${basePath}/api/contact`, {
+      const response = await fetch("/pedodonti/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -27,7 +25,7 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
         setSubmitted(true)
         setFormData({ name: "", phone: "", message: "" })
         setTimeout(() => {
-          router.push(`${basePath}/tesekkurler.html`)
+          router.push("/tesekkur.html")
         }, 800)
       } else {
         alert("Mesaj gönderilemedi. Lütfen tekrar deneyin.")
