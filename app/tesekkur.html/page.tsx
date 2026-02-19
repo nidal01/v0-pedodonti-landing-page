@@ -32,9 +32,7 @@ export default function ThankYouPage() {
         <p className="mb-3 text-base text-slate-600 sm:text-lg">
           Formunuz başarıyla iletildi. Ekibimiz en kısa sürede sizinle iletişime geçecek.
         </p>
-        <p className="mb-8 text-sm text-slate-500">
-          5 saniye içinde otomatik olarak ana sayfaya yönlendirileceksiniz.
-        </p>
+        
         <Link
           href="/"
           className="inline-flex items-center rounded-xl bg-[hsl(200,90%,45%)] px-6 py-3 font-semibold text-white transition hover:opacity-90"
