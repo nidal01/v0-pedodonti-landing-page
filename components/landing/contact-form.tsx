@@ -12,6 +12,12 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    if (!/^\d{11}$/.test(formData.phone)) {
+      alert("Telefon numarası 11 haneli ve sadece rakamlardan oluşmalıdır.")
+      return
+    }
+
     setIsLoading(true)
 
     try {
@@ -78,13 +84,20 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
       />
       <input
         type="tel"
-        placeholder="Telefon Numaranız"
+        placeholder="0532 xxx xx xx"
         required
         value={formData.phone}
-        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+        onChange={(e) => {
+          const digitsOnly = e.target.value.replace(/\D/g, "").slice(0, 11)
+          setFormData({ ...formData, phone: digitsOnly })
+        }}
+        inputMode="numeric"
+        pattern="[0-9]{11}"
+        minLength={11}
+        maxLength={11}
         className={`rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${isDark
-          ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
-          : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
+          ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-[hsl(var(--accent))]"
+          : "border-border bg-card text-foreground placeholder:text-muted-foreground/70 focus:border-primary"
           }`}
       />
       <textarea

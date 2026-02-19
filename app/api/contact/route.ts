@@ -13,6 +13,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    if (!/^\d{11}$/.test(phone)) {
+      return NextResponse.json(
+        { error: "Telefon numarası 11 haneli ve yalnızca rakamlardan oluşmalıdır" },
+        { status: 400 }
+      )
+    }
+
     const smtpHost = process.env.SMTP_HOST
     const smtpPort = process.env.SMTP_PORT
     const smtpUser = process.env.SMTP_USER
